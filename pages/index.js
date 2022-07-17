@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>What Are My Abortion Rights?</title>
       </Head>
