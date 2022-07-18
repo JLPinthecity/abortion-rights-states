@@ -3,7 +3,8 @@ import Axios from "axios";
 const gestationalLimitsTable =
   "https://api.abortionpolicyapi.com/v1/gestational_limits/states";
 
-const StatesList = () => {
+const StatesList = ({ gestationalLimitsData }) => {
+  console.log(gestationalLimitsData);
   return (
     <div>
       <div></div>
@@ -12,7 +13,9 @@ const StatesList = () => {
 };
 
 export const getStaticProps = async () => {
-  const data = await Axios.get({ gestationalLimitsTable });
+  const data = await Axios.get(
+    "https://api.abortionpolicyapi.com/v1/gestational_limits/states"
+  );
 
   return {
     props: {
