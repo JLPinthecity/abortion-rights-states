@@ -1,16 +1,32 @@
 import axios from "axios";
 
-const gestationalLimitsTable =
-  "https://api.abortionpolicyapi.com/v1/gestational_limits/states";
-
 const token = process.env.PRIVATE_API_KEY;
 
 const StatesList = ({ gestationalLimitsData }) => {
-  console.log(gestationalLimitsData);
-  //   console.log(process.env.PRIVATE_API_KEY);
+  //   const populateStates = () => {
+  //     // array of arrays.length==2, [0] == state name, [1] == state info
+  //     let statesFromData = Object.entries(gestationalLimitsData);
+  //     // console.log(statesFromData);
+  //     return statesFromData.map((state) => {
+  //       <h1>{state[0]}</h1>;
+  //     });
+  //   };
+
+  // array of arrays.length==2, [0] == state name, [1] == state info
+  let statesFromData = Object.entries(gestationalLimitsData);
+  console.log(statesFromData);
+
   return (
     <div>
-      <div></div>
+      <div>
+        {statesFromData.map((state) => {
+          return (
+            <div>
+              <h1>{state[0]}</h1>;
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
