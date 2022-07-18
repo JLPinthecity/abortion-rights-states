@@ -1,10 +1,13 @@
-import Axios from "axios";
+import axios from "axios";
 
 const gestationalLimitsTable =
   "https://api.abortionpolicyapi.com/v1/gestational_limits/states";
 
+const token = process.env.PRIVATE_API_KEY;
+
 const StatesList = ({ gestationalLimitsData }) => {
   console.log(gestationalLimitsData);
+  //   console.log(process.env.PRIVATE_API_KEY);
   return (
     <div>
       <div></div>
@@ -13,8 +16,13 @@ const StatesList = ({ gestationalLimitsData }) => {
 };
 
 export const getStaticProps = async () => {
-  const data = await Axios.get(
-    "https://api.abortionpolicyapi.com/v1/gestational_limits/states"
+  const data = await axios.get(
+    "https://api.abortionpolicyapi.com/v1/gestational_limits/states",
+    {
+      headers: {
+        token: `${token}`,
+      },
+    }
   );
 
   return {
