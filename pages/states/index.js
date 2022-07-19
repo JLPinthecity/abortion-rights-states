@@ -1,17 +1,9 @@
 import axios from "axios";
+import GestationalLimits from "../../components/GestationalLimits";
 
 const token = process.env.PRIVATE_API_KEY;
 
 const StatesList = ({ gestationalLimitsData }) => {
-  //   const populateStates = () => {
-  //     // array of arrays.length==2, [0] == state name, [1] == state info
-  //     let statesFromData = Object.entries(gestationalLimitsData);
-  //     // console.log(statesFromData);
-  //     return statesFromData.map((state) => {
-  //       <h1>{state[0]}</h1>;
-  //     });
-  //   };
-
   // array of arrays.length==2, [0] == state name, [1] == state info
   let statesFromData = Object.entries(gestationalLimitsData);
   console.log(statesFromData);
@@ -21,8 +13,12 @@ const StatesList = ({ gestationalLimitsData }) => {
       <div>
         {statesFromData.map((state) => {
           return (
-            <div>
-              <h1>{state[0]}</h1>;
+            <div key={state[0]}>
+              <title></title>
+              <h1>{state[0]}</h1>
+              <div>
+                <GestationalLimits stats={state[1]} />
+              </div>
             </div>
           );
         })}
