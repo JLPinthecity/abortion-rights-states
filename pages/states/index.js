@@ -1,5 +1,5 @@
 import axios from "axios";
-import GestationalLimits from "../../components/GestationalLimits";
+import GestationalLimits from "../../components/GestationalLimitsStateCard";
 
 const token = process.env.PRIVATE_API_KEY;
 
