@@ -20,7 +20,7 @@ const InsuranceCoverage = (props) => {
 
   return (
     <div>
-      "insurance test test"
+      <div>insurance test test</div>
       {/* Current abortion bans:<div>{bans() ? `${bans()}` : "RUH-OH"}</div>
         <div>
           LIFE SAVING EXEMPTION:

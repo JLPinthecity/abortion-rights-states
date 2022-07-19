@@ -1,5 +1,6 @@
 import axios from "axios";
-import GestationalLimits from "../../components/GestationalLimitsStateCard";
+import GestationalLimits from "../../components/GestationalLimits";
+import Link from "next/link";
 
 const token = process.env.PRIVATE_API_KEY;
 
@@ -14,8 +15,9 @@ const StatesList = ({ gestationalLimitsData }) => {
         {statesFromData.map((state) => {
           return (
             <div key={state[0]}>
-              <title></title>
-              <h1>{state[0]}</h1>
+              <Link href={"/states/" + state[0]}>
+                <h1>{state[0]}</h1>
+              </Link>
               <div>
                 <GestationalLimits stats={state[1]} />
               </div>
