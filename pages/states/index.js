@@ -7,15 +7,24 @@ const token = process.env.PRIVATE_API_KEY;
 const StatesList = ({ gestationalLimitsData }) => {
   // array of arrays.length==2, [0] == state name, [1] == state info
   let statesFromData = Object.entries(gestationalLimitsData);
-  console.log(statesFromData);
+  //   console.log(statesFromData);
+
+  const kebabCase = (name) => {
+    return name
+      .replace(/([a-z])([A-Z])/g, "$1-$2")
+      .replace(/[\s_]+/g, "-")
+      .toLowerCase();
+  };
 
   return (
     <div>
       <div>
         {statesFromData.map((state) => {
+          const stateNameInKebabCase = kebabCase(state[0]);
+
           return (
             <div key={state[0]}>
-              <Link href={"/states/" + state[0]}>
+              <Link href={"/states/" + stateNameInKebabCase}>
                 <h1>{state[0]}</h1>
               </Link>
               <div>
