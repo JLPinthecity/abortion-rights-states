@@ -5,6 +5,7 @@ import Link from "next/link";
 const token = process.env.PRIVATE_API_KEY;
 
 const StatesList = ({ gestationalLimitsData }) => {
+  debugger;
   // array of arrays.length==2, [0] == state name, [1] == state info
   let statesFromData = Object.entries(gestationalLimitsData);
   //   console.log(statesFromData);
@@ -28,7 +29,7 @@ const StatesList = ({ gestationalLimitsData }) => {
                 <h1>{state[0]}</h1>
               </Link>
               <div>
-                <GestationalLimits stats={state[1]} />
+                <GestationalLimits stats={state[1]} stateName={state[0]} />
               </div>
             </div>
           );
