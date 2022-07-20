@@ -4,13 +4,18 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import states from "../constants/states";
 import USAMap from "react-usa-map";
+import kebabCase from "../constants/kebabCase";
+import { useRouter } from "next/router";
 
 export default function Home(props) {
+  const router = useRouter();
+
   const getStateFullName = (stateAbbr) => {
     // console.log("States list", states);
     // console.log("State abbreviation: ", stateAbbr);
     // console.log("Interpolated from array: ", states[stateAbbr]);
-    return states[stateAbbr];
+    let href = "/states/" + kebabCase(states[stateAbbr]);
+    router.push(href);
   };
 
   const mapHandler = (event) => {
