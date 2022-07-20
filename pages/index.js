@@ -6,23 +6,15 @@ import states from "../constants/states";
 import USAMap from "react-usa-map";
 
 export default function Home(props) {
-  /* mandatory */
-
-  /* 
-RTP:
-Changed class component to functional component. 
-Eliminated class logic. 
-Put states in constant file 
-
-*/
   const getStateFullName = (stateAbbr) => {
-    console.log(stateAbbr);
-    console.log("States list", states);
-    return states[`${stateAbbr}`];
+    // console.log("States list", states);
+    // console.log("State abbreviation: ", stateAbbr);
+    // console.log("Interpolated from array: ", states[stateAbbr]);
+    return states[stateAbbr];
   };
 
   const mapHandler = (event) => {
-    console.log("Map handler works!", event.target.dataset.name);
+    // console.log("Map handler works!", event.target.dataset.name);
     getStateFullName(event.target.dataset.name);
   };
 
