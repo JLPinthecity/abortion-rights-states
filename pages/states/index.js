@@ -1,21 +1,14 @@
 import axios from "axios";
 import GestationalLimits from "../../components/GestationalLimits";
 import Link from "next/link";
+import kebabCase from "../../constants/kebabCase";
 
 const token = process.env.PRIVATE_API_KEY;
 
 const StatesList = ({ gestationalLimitsData }) => {
-  debugger;
   // array of arrays.length==2, [0] == state name, [1] == state info
   let statesFromData = Object.entries(gestationalLimitsData);
   //   console.log(statesFromData);
-
-  const kebabCase = (name) => {
-    return name
-      .replace(/([a-z])([A-Z])/g, "$1-$2")
-      .replace(/[\s_]+/g, "-")
-      .toLowerCase();
-  };
 
   return (
     <div>
@@ -28,9 +21,9 @@ const StatesList = ({ gestationalLimitsData }) => {
               <Link href={"/states/" + stateNameInKebabCase}>
                 <h1>{state[0]}</h1>
               </Link>
-              <div>
-                <GestationalLimits stats={state[1]} stateName={state[0]} />
-              </div>
+              {/* <div> */}
+              {/* <GestationalLimits stats={state[1]} stateName={state[0]} /> */}
+              {/* </div> */}
             </div>
           );
         })}

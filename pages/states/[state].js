@@ -1,8 +1,10 @@
 import { useRouter } from "next/router";
 
-const State = () => {
+const State = (props) => {
   const router = useRouter();
-  const { statename } = router.query;
+  const stateNameFromUrl = router.query.state;
+
+  debugger;
 
   return <div>{statename} abortion laws TEST IF DYNAMICLINKS WORK </div>;
 };
