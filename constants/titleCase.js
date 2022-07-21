@@ -1,5 +1,5 @@
 const titleCase = (stateUrl) => {
-  const separateWords = stateUrl.replace("_", " ");
+  const separateWords = stateUrl.replace("-", " ");
 
   separateWords = separateWords.toLowerCase().split(" ");
   for (var i = 0; i < separateWords.length; i++) {
