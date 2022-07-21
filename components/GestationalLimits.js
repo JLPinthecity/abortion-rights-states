@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const token = process.env.PRIVATE_API_KEY;
+import { token, gestationalLimitsTableURL } from "../constants/tableEndpoints";
 
 const GestationalLimits = (props) => {
   //boolean 28, 99, or null
