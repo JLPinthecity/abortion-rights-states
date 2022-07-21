@@ -13,7 +13,7 @@ const State = (props) => {
     <div>
       <div>{stateName} Abortion Laws </div>
       <div>{stateName} Gestationl Limits </div>
-      <GestationalLimits />
+      <GestationalLimits stateName={stateName} />
     </div>
   );
 };

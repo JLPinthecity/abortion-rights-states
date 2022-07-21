@@ -1,5 +1,4 @@
 /* eslint-disable react/display-name */
-import React, { Component, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import states from "../constants/states";

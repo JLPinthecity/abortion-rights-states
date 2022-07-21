@@ -8,7 +8,6 @@ const StatesList = () => {
   return (
     <div>
       <div>
-        test
         {statesFromData.map((state) => {
           const stateNameInKebabCase = kebabCase(state[1]);
 

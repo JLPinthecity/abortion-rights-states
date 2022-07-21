@@ -101,7 +101,7 @@ const GestationalLimits = (props) => {
 
 export const getStaticProps = async () => {
   const data = await axios.get(
-    "https://api.abortionpolicyapi.com/v1/gestational_limits/states",
+    { gestationalLimitsTableURL },
     {
       headers: {
         token: `${token}`,
