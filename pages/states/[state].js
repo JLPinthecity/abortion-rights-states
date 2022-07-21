@@ -7,7 +7,7 @@ const State = (props) => {
   const stateNameFromUrl = router.query.state;
   const stateName = titleCase(stateNameFromUrl);
 
-  // debugger;
+  debugger;
 
   return (
     <div>
