@@ -6,35 +6,50 @@ import InsuranceCoverage from "../../components/InsuranceCoverage";
 import {
   token,
   gestationalLimitsTableURL,
+  insuranceCoverageTableURL,
 } from "../../constants/tableEndpoints";
 
 export const getServerSideProps = async ({ params }) => {
-  console.log("Uncapped params:", params);
-  console.log("Params from URL: ", titleCase(params.state));
+  // console.log("Uncapped params:", params);
+  // console.log("Params from URL: ", titleCase(params.state));
   const state = titleCase(params.state);
+
   const gestLimits = await axios.get(`${gestationalLimitsTableURL}/${state}`, {
     headers: {
       token: `${token}`,
     },
   });
 
-  console.log("Return from API:", gestLimits.data);
+  const insuranceCov = await axios.get(
+    `${insuranceCoverageTableURL}/${state}`,
+    {
+      headers: {
+        token: `${token}`,
+      },
+    }
+  );
 
-  return { props: { gestData: gestLimits.data } };
+  // console.log("Return from API:", gestLimits.data);
+
+  return {
+    props: { gestData: gestLimits.data, insuranceData: insuranceCov.data },
+  };
 };
 
 const State = (props) => {
-  console.log("gestData destructured from props:", props);
+  // debugger;
+  // console.log("gestData destructured from props:", props);
   const router = useRouter();
   const stateNameFromUrl = router.query.state;
   const stateName = titleCase(stateNameFromUrl);
-
+  debugger;
   return (
     <div>
       <div>{stateName} Abortion Laws </div>
       <div>{stateName} Gestationl Limits </div>
-      <GestationalLimits stats={props} />
-      {/* <InsuranceCoverage stateName={stateName} /> */}
+      <GestationalLimits state={stateName} stats={props.gestData} />
+
+      <InsuranceCoverage state={stateName} stats={props.insuranceData} />
     </div>
   );
 };
