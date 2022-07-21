@@ -25,3 +25,5 @@ const StatesList = () => {
 };
 
 export default StatesList;
+
+//getStaticPaths runs at build time
