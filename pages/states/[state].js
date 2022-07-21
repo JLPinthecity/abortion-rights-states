@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import titleCase from "../../constants/titleCase";
+import GestationalLimits from "../../components/GestationalLimits";
 
 const State = (props) => {
   const router = useRouter();
@@ -12,6 +13,7 @@ const State = (props) => {
     <div>
       <div>{stateName} Abortion Laws </div>
       <div>{stateName} Gestationl Limits </div>
+      <GestationalLimits />
     </div>
   );
 };

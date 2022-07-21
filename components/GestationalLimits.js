@@ -1,3 +1,7 @@
+import axios from "axios";
+
+const token = process.env.PRIVATE_API_KEY;
+
 const GestationalLimits = (props) => {
   //boolean 28, 99, or null
   const banned = props.stats.banned_after_weeks_since_LMP
@@ -94,6 +98,23 @@ const GestationalLimits = (props) => {
       </div>
     </div>
   );
+};
+
+export const getStaticProps = async () => {
+  const data = await axios.get(
+    "https://api.abortionpolicyapi.com/v1/gestational_limits/states",
+    {
+      headers: {
+        token: `${token}`,
+      },
+    }
+  );
+
+  return {
+    props: {
+      gestationalLimitsData: data.data,
+    },
+  };
 };
 
 export default GestationalLimits;
