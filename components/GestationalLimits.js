@@ -2,6 +2,8 @@ import axios from "axios";
 import { token, gestationalLimitsTableURL } from "../constants/tableEndpoints";
 
 const GestationalLimits = (props) => {
+  const url = `${gestationalLimitsTableURL + "/" + props.stateName}`;
+  // debugger;
   //boolean 28, 99, or null
   const banned = props.stats.banned_after_weeks_since_LMP
     ? props.stats.banned_after_weeks_since_LMP
