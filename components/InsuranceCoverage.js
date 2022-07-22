@@ -9,6 +9,10 @@ const InsuranceCoverage = (props) => {
     ? targetData.requires_coverage
     : null;
 
+  const privateCoverage = targetData.private_coverage_no_restrictions
+    ? targetData.private_coverage_no_restrictions
+    : null;
+
   return (
     <div>
       <div>
@@ -20,11 +24,20 @@ const InsuranceCoverage = (props) => {
       </div>
 
       <div>
-        <b>Requires coverage:</b>
+        <b>Public insurance requires coverage:</b>
       </div>
       <div>
         {requiresCoverage
           ? "If checked, the state requires that require private health plans regulated by the state cover abortion. These requirements do not apply to self-insured plans (in which the employer takes on all the risk, instead of contracting with a health insurer) as self-insured plans are regulated at the federal, not state, level."
+          : "This state does not have require coverage."}
+      </div>
+
+      <div>
+        <b>Private insurance requires coverage:</b>
+      </div>
+      <div>
+        {privateCoverage
+          ? "Few states require that private insurance cover abortion. If checked, private insurance may do so, but is not necessarily required to.Private insurance here refers to non-self-insured plans. In self-insured plans, the employer takes on all the risk, instead of contracting with a health insurer; self-insured plans are regulated at the federal, not state, level."
           : "This state does not have require coverage."}
       </div>
     </div>
