@@ -6,27 +6,23 @@ body {
   line-height: 1.6;
   font-size: 18px;
   background-color: rgb(255,255,255);
+  color: rgb(36, 50, 139);
 }
 
 * {
   box-sizing: border-box;
 }
-/* 
-a {
-  color: rgb(32, 58, 123);
+
+.main a {
+ 
   text-decoration: none;
   text-transform: uppercase;
 }
 
-a:hover {
+.main a:hover {
   animation: transitionIn;
   cursor: pointer;
-  background-color: rgb(32, 58, 123);
-  color: white;
-  border-radius: 5px;
-} */
-
-
+}
 
 img {
   max-width: 100%;
