@@ -6,7 +6,10 @@ import USAMap from "react-usa-map";
 import kebabCase from "../constants/kebabCase";
 import { useRouter } from "next/router";
 
+//MAIN PAGE MAP => (CLICK) => [STATE].JS
+
 export default function Home(props) {
+  debugger;
   const router = useRouter();
 
   const getStateFullName = (stateAbbr) => {

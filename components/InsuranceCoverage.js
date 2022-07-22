@@ -13,6 +13,10 @@ const InsuranceCoverage = (props) => {
     ? targetData.private_coverage_no_restrictions
     : null;
 
+  const privateLifeException = targetData.private_exception_life
+    ? targetData.private_exception_life
+    : null;
+
   return (
     <div>
       <div>
@@ -39,6 +43,13 @@ const InsuranceCoverage = (props) => {
         {privateCoverage
           ? "Few states require that private insurance cover abortion. If checked, private insurance may do so, but is not necessarily required to.Private insurance here refers to non-self-insured plans. In self-insured plans, the employer takes on all the risk, instead of contracting with a health insurer; self-insured plans are regulated at the federal, not state, level."
           : "This state does not have require coverage."}
+      </div>
+
+      <div>
+        <h3> Exceptions:</h3>
+        {privateLifeException
+          ? "  <b>Life-saving exception:</b> The state allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life."
+          : "BLANK FOR LIFE EXCCEPPTION"}
       </div>
     </div>
   );

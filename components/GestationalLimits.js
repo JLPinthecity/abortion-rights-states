@@ -1,4 +1,5 @@
 const GestationalLimits = (props) => {
+  debugger;
   const state = props.state;
 
   const targetData = props.stats[state];
