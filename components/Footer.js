@@ -3,9 +3,24 @@ import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
-      <div className={styles.footer}>
-        <div className={styles.links}>
+    <div className={styles.footer_container}>
+      <div className={styles.footer_wrapper}>
+        <div className={styles.box}>
+          <div className={styles.footer_title}>Abortion is health care.</div>
+
+          <div className={styles.footer_email}>
+            Submit corrections or ask a question
+            <Link
+              href="mailto: hitherejoann@gmail.com"
+              className={styles.footer_email}
+            >
+              <a> here</a>
+            </Link>
+            .
+          </div>
+        </div>
+
+        <div className={styles.box}>
           <Link href="/">
             <a>Home</a>
           </Link>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import kebabCase from "../../constants/kebabCase";
 import states from "../../constants/states";
-import GestationalLimits from "../../components/GestationalLimits";
 
 const StatesList = () => {
   let statesFromData = Object.entries(states);
@@ -17,8 +16,6 @@ const StatesList = () => {
               <Link href={"/states/" + stateNameInKebabCase}>
                 <h1>{state[1]}</h1>
               </Link>
-
-              <GestationalLimits />
             </div>
           );
         })}
