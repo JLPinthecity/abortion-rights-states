@@ -1,15 +1,18 @@
 import Link from "next/link";
-import styles from "../styles/Navbar.module.css";
+import styles from "../styles/Header.module.css";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
   return (
-    <div>
-      <div className={styles.navbar}>
-        <div className={styles.links}>
+    <div className={styles.header_container}>
+      <div className={styles.header_wrapper}>
+        <div className={styles.title}>
           <Link href="/">
-            <a>Home</a>
+            <a>Abortion Rights by State</a>
           </Link>
         </div>
+
+        <MenuIcon className={styles.icon} />
       </div>
     </div>
   );

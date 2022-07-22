@@ -1,0 +1,23 @@
+.header_container{
+    width: 100%;
+}
+
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Nanum Myeongjo', serif;   font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.title a {
+    color: rgb(32, 58, 123);
+    text-decoration: none;
+}
+
+.icon {
+    margin: 1rem;
+}

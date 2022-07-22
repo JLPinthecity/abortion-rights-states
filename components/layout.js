@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Layout.module.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
-import Header from "./Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Layout = ({ children }) => {
   return (
