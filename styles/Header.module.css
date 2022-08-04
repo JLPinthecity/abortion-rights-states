@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgba(207, 198, 198, 0.749);
 }
 
 .header_wrapper{

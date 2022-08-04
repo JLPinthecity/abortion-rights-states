@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header />
-      <Navbar />
       <main className={styles.main_wrapper}>{children}</main>
       <Footer />
     </div>

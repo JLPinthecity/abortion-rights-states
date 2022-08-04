@@ -1,5 +1,4 @@
 /* eslint-disable react/display-name */
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import states from "../constants/states";
 import USAMap from "react-usa-map";
@@ -35,9 +34,6 @@ export default function Home(props) {
   return (
     <div className={styles.home_container}>
       <div className={styles.intro}>
-        <div className={styles.title}>
-          <h1>What Are My Abortion Rights?</h1>
-        </div>
         <div className={styles.text}>
           <p>
             Click on your state on the U.S. map or select your state from the
@@ -53,6 +49,10 @@ export default function Home(props) {
             <i>viability </i>
             for better comprehension of current state regulations.
           </p>
+        </div>
+
+        <div className={styles.title}>
+          <h1>What Are My Abortion Rights?</h1>
         </div>
       </div>
 
