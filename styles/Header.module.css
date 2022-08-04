@@ -1,6 +1,5 @@
 .header_container{
     width: 100%;
-    border: 1px solid green;
     display: flex;
     align-items: center;
 }
@@ -8,15 +7,14 @@
 .header_wrapper{
     width: 100%;
     display: flex;
-    border: 1px solid green;
     justify-content: space-between;
     align-items: center;
 }
 
 .title{
     font-family: 'Backslash';
-    font-size: 2.5rem;
-    padding: 1rem;
+    font-size: 3rem;
+    padding: 2rem;
 }
 
 .title a {
@@ -26,4 +24,31 @@
 
 .icon {
     margin: 1rem;
+}
+
+
+.nav_container{
+    width: 50%;
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 900px)  {
+    .nav_container{
+        display: none;
+    }
+
+   .header_container .title{
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    }  
+}
+
+
+@media only screen and (min-width: 900px)  {
+
+    .header_container .icon{
+        display:none;
+    }
+
 }

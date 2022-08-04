@@ -5,7 +5,11 @@ font-family: 'Nanum Myeongjo', serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Zilla Slab', serif;
 
-SITE TITLE: Backslash
-NAV BAR
 GirlasFree
 Cheva
+
+SITE TITLE: Backslash
+NAV BAR: Jost
+
+border-top: 1px solid rgba(207, 198, 198, 0.749);
+border-bottom: 1px solid rgba(207, 198, 198, 0.749);

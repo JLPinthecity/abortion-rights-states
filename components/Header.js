@@ -14,7 +14,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div>
+        <div className={styles.nav_container}>
           <Navbar />
         </div>
       </div>
