@@ -5,11 +5,10 @@ import states from "../constants/states";
 import USAMap from "react-usa-map";
 import kebabCase from "../constants/kebabCase";
 import { useRouter } from "next/router";
-
-//MAIN PAGE MAP => (CLICK) => [STATE].JS
+import SelectState from "../components/SelectState";
 
 export default function Home(props) {
-  debugger;
+  // debugger;
   const router = useRouter();
 
   const getStateFullName = (stateAbbr) => {
@@ -28,24 +27,43 @@ export default function Home(props) {
   //clicking on map returns state abbrev
 
   const statesCustomConfig = {
-    NJ: {
-      fill: "navy",
-      clickHandler: (event) =>
-        console.log("Custom handler for NJ", event.target.dataset),
-    },
-    NY: {
-      fill: "#CC0000",
-    },
+    // SD: {
+    //   fill: "black",
+    // },
   };
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>What Are My Abortion Rights?</title>
-      </Head>
+    <div className={styles.home_container}>
+      <div className={styles.intro}>
+        <div className={styles.title}>
+          <h1>What Are My Abortion Rights?</h1>
+        </div>
+        <div className={styles.text}>
+          <p>
+            Click on your state on the U.S. map or select your state from the
+            dropdown to see up-to-date data about abortion laws in your state.
+            <br />
+            <br />
+            Find out specifics about what your state mandates in terms of
+            gestational limits, private and public insurance coverage, mandatory
+            waiting periods, and regulations regarding minors.
+            <br />
+            <br />
+            We try and define terms like <i>gestational limit</i> and{" "}
+            <i>viability </i>
+            for better comprehension of current state regulations.
+          </p>
+        </div>
+      </div>
 
-      <div className="App">
-        <USAMap customize={statesCustomConfig} onClick={mapHandler} />
+      <SelectState />
+
+      <div className={styles.map}>
+        <USAMap
+          customize={statesCustomConfig}
+          onClick={mapHandler}
+          className={styles.svg}
+        />
       </div>
     </div>
   );

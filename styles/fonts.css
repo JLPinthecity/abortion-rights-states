@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Backslash';
+    src: url('../public/static/Backslash.ttf');
+}
+
+@font-face {
+    font-family: 'GirlasFree';
+    src: url('../public/static/GirlasFree.ttf');
+}
+
+@font-face {
+    font-family: 'Cheva';
+    src: url('../public/static/Cheva.ttf');
+}
+
+/* @font-face {
+    font-family: 'Roxale';
+    src: url('../public/static/Roxale.ttf');
+} */

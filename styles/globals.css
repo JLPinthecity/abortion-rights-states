@@ -47,3 +47,16 @@ button{
     padding: 1rem 5rem;
     font-family: 'Jost', sans-serif;
 }
+
+svg{
+  width: 100%;
+}
+
+h1{
+  color: black;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+p{
+  color: black;
+}

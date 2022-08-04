@@ -1,5 +1,29 @@
-.container {
-  padding: 0 2rem;
+.home_container {
+  width: 100%;
 }
 
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  padding-top: 1rem;
+}
+
+.text{
+  display: flex;
+  padding: 1rem 7rem;
+  font-size: 1.3rem;
+  font-family: 'Jost', sans-serif;
+}
+
+.text p{
+  width: 100%;
+}
+.map{
+  padding: 1rem;
+}
 
