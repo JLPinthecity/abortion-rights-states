@@ -42,10 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        © 2022 All Rights Reserved.{" "}
-        <Link className={styles.copyright} href="https://joannpan.dev/">
-          <a target="_blank">Site credits.</a>
-        </Link>
+        © 2022 All Rights Reserved. Built by Joann Pan.
       </div>
     </div>
   );

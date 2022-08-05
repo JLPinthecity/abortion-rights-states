@@ -9,6 +9,8 @@ import {
   insuranceCoverageTableURL,
 } from "../../constants/tableEndpoints";
 
+import styles from "../../styles/State.module.css";
+
 export const getServerSideProps = async ({ params }) => {
   // console.log("Uncapped params:", params);
   // console.log("Params from URL: ", titleCase(params.state));
@@ -42,14 +44,31 @@ const State = (props) => {
   const router = useRouter();
   const stateNameFromUrl = router.query.state;
   const stateName = titleCase(stateNameFromUrl);
-  debugger;
-  return (
-    <div>
-      <div>{stateName} Abortion Laws </div>
-      <div>{stateName} Gestationl Limits </div>
-      <GestationalLimits state={stateName} stats={props.gestData} />
 
-      <InsuranceCoverage state={stateName} stats={props.insuranceData} />
+  return (
+    <div className={styles.state_container}>
+      <div className={styles.state_wrapper}>
+        <div className={styles.intro_wrapper}>
+          <div className={styles.title}>{stateName} Abortion Laws </div>
+
+          <div className={styles.rightsection}>
+            <div>Providing Clarity</div>
+            <div>
+              Here we break down state rulings about gestational limits,
+              insurance coverage, and more.
+            </div>
+          </div>
+        </div>
+
+        <section>
+          <div className={styles.secondary_title}>
+            {stateName} Gestational Limits
+          </div>
+          <GestationalLimits state={stateName} stats={props.gestData} />
+        </section>
+
+        <InsuranceCoverage state={stateName} stats={props.insuranceData} />
+      </div>
     </div>
   );
 };
