@@ -52,7 +52,7 @@ const State = (props) => {
           <div className={styles.title}>{stateName} Abortion Laws </div>
 
           <div className={styles.rightsection}>
-            <div>Providing Clarity</div>
+            <div className={styles.small_title}>Providing Clarity</div>
             <div>
               Here we break down state rulings about gestational limits,
               insurance coverage, and more.
@@ -61,13 +61,18 @@ const State = (props) => {
         </div>
 
         <section>
-          <div className={styles.secondary_title}>
+          <div className={styles.small_title}>
             {stateName} Gestational Limits
           </div>
           <GestationalLimits state={stateName} stats={props.gestData} />
         </section>
 
-        <InsuranceCoverage state={stateName} stats={props.insuranceData} />
+        <section>
+          <div className={styles.small_title}>
+            {stateName} Insurance Coverage
+          </div>
+          <InsuranceCoverage state={stateName} stats={props.insuranceData} />
+        </section>
       </div>
     </div>
   );
