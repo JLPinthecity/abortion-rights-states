@@ -62,7 +62,9 @@ const State = (props) => {
 
         <section>
           <div className={styles.small_title}>
-            {stateName} Gestational Limits
+            Gestational limits determined by each state that imposes a cutoff
+            after a certain time in the pregnancy when abortion is no longer
+            allowed.
           </div>
           <GestationalLimits state={stateName} stats={props.gestData} />
         </section>

@@ -1,3 +1,5 @@
+import styles from "../styles/Section.module.css";
+
 const GestationalLimits = (props) => {
   debugger;
   const state = props.state;
@@ -34,11 +36,11 @@ const GestationalLimits = (props) => {
     switch (banned) {
       case 28:
         console.log("test 28");
-        return "Bans in the third trimester";
+        return "Ban in the third trimester, which starts in week 28.";
       case 99:
-        return "Bans after viability";
+        return "Bans after fetal viability—ßwhen a fetus can survive outside the womb.";
       case null:
-        return "Abortion is now banned in this state.";
+        return "Abortion is banned in this state.";
       default:
         return `${banned} weeks since Last Menstrual Period (LMP)`;
     }
@@ -47,13 +49,13 @@ const GestationalLimits = (props) => {
   const distinction_to_life_saving_exemption = () => {
     switch (exception_health) {
       case "Physical":
-        return "physical health (excluding mental health)";
+        return "Abortion is not banned to preserve the pregnant person's life. Specifically, physical health (excluding mental health).";
       case "Any":
-        return "unspecified health (which may include mental health)";
+        return "Abortion is not banned to preserve the pregnant person's life.  No distinctions made— between physical and/or mental health.";
       case "Major Bodily Function":
-        return "exceptions which permit abortion in the case where a person would suffer substantial and irreversible impairment of a major bodily function (which may include mental health)";
+        return "Abortion is not banned to preserve the pregnant person's life. Abortion is allowed in cases  where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
       case null:
-        return "Abortion is now banned in this state.";
+        return "No distinctions specified";
       default:
         return "DEFAULT CASE";
     }
@@ -61,42 +63,53 @@ const GestationalLimits = (props) => {
 
   const fetal_health_exemption = () => {
     switch (exception_health) {
-      case "Physical":
-        return "physical health (excluding mental health)";
-      case "Any":
-        return "unspecified health (which may include mental health)";
-      case "Major Bodily Function":
-        return "exceptions which permit abortion in the case where a person would suffer substantial and irreversible impairment of a major bodily function (which may include mental health)";
-      case null:
-        return "Abortion is now banned in this state.";
+      case "Serious fetal anomaly":
+        return "Abortion is not banned based on the health or status of the fetus. Exceptions in place for serious fetal anomalites versus lethal ones.";
+      case "Lethal fetal anomaly":
+        return "Abortion is not banned based on the health or status of the fetus. Exceptions in place for lethal fetal anomalites versus serious ones.";
       default:
-        return "DEFAULT CASE";
+        return "No exceptions for fetal anomalies specified.";
     }
   };
 
   return (
-    <div>
-      <div>
-        <b>Gestational Limits in {state}</b>
-      </div>
-      <div>
-        Current abortion bans:<div>{bans() ? `${bans()}` : "RUH-OH"}</div>
-        <div>
-          LIFE SAVING EXEMPTION:
+    <div className={styles.data_wrapper}>
+      <div className={styles.subsection}>
+        <div className={styles.label}>
+          Gestational limit imposed by state (varying legal language normalized
+          as weeks since last menstrual period (LMP)):
+        </div>
+
+        <div className={styles.answer}>{bans() ? `${bans()}` : "RUH-OH"}</div>
+
+        <div className={styles.label}>
+          IS THERE A LIFE-SAVING EXEMPTION IN PLACE?
+        </div>
+        <div className={styles.answer}>
           {exception_life
-            ? "directlyfromtable: abortion is not banned if necessary to save the pregnant person's life (edit later). This state has life-saving exemptions to save the life of the pregnant person."
+            ? "In this state, abortion allowed if deemed necessary to save a pregnant person's life."
             : "This state does not have life-saving exemptions in place."}
         </div>
-        <div>
-          DISTINCTION TO LIFE SAVING EXEMPTION:
+
+        <div className={styles.label}>
+          ARE THERE DISTINCTION MADE REGARDING THE LIFE-SAVING EXEMPTION TO THE
+          ABORTION BAN?
+        </div>
+        <div className={styles.answer}>
           {distinction_to_life_saving_exemption()}
         </div>
-        <div>
-          RAPE + INCEST EXEMPTIONS:
+
+        <div className={styles.label}>ARE THERE RAPE OR INCEST EXEMPTIONS?</div>
+        <div className={styles.answer}>
           {exception_rape_or_incest
-            ? "Laws allow abortion in cases of rape and/or incest."
+            ? "State allow abortion in cases of rape or incest."
             : "This state does not have rape and incest exceptions in place."}
         </div>
+
+        <div className={styles.label}>
+          ARE THERE Fetal anomaly exceptions in place?
+        </div>
+        <div className={styles.answer}>{fetal_health_exemption()}</div>
       </div>
     </div>
   );
