@@ -19,6 +19,19 @@ const InsuranceCoverage = (props) => {
     ? targetData.private_exception_life
     : null;
 
+  const private_exception_health = targetData.private_exception_health
+    ? targetData.exception_health
+    : null;
+
+  const privateHealthException = () => {
+    switch (private_exception_health) {
+      case "major bodily function":
+        return "This state allows private insurance coverage when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+      default:
+        return "No exceptions for serious health conditions specified.";
+    }
+  };
+
   return (
     <div className={styles.data_wrapper}>
       <div className={styles.subsection}>
@@ -32,20 +45,35 @@ const InsuranceCoverage = (props) => {
             : "This state does not have require abortion coverage by private health plans regulated by state."}
         </div>
 
-        <div>
-          <b>Private insurance requires coverage:</b>
+        <div className={styles.label}>
+          <b>
+            Can private insurance cover abortions despite not being required to?
+          </b>
         </div>
-        <div>
+        <div className={styles.answer}>
           {privateCoverage
-            ? "Few states require that private insurance cover abortion. If checked, private insurance may do so, but is not necessarily required to.Private insurance here refers to non-self-insured plans. In self-insured plans, the employer takes on all the risk, instead of contracting with a health insurer; self-insured plans are regulated at the federal, not state, level."
-            : "This state does not have require coverage."}
+            ? "Private insurance may cover abortion but not necessarily required to."
+            : "This state does not have require coverage. Private insurance does not cover abortion."}
         </div>
 
         <div>
-          <h3> Exceptions:</h3>
-          {privateLifeException
-            ? "  <b>Life-saving exception:</b> The state allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life."
-            : "BLANK FOR LIFE EXCCEPPTION"}
+          <h3 className={styles.label}>
+            <i>EXCEPTIONS TO ABORTION COVERAGE RESTRICTIONS</i>
+          </h3>
+
+          <div className={styles.label}>Life-saving exemption:</div>
+
+          <div className={styles.answer}>
+            {privateLifeException
+              ? "This state allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life."
+              : "No life-saving exemption"}
+          </div>
+
+          <div className={styles.label}>
+            Exemption for a serious health condition:
+          </div>
+
+          <div className={styles.answer}>{privateHealthException()}</div>
         </div>
       </div>
     </div>
