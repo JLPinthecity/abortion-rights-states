@@ -38,7 +38,7 @@ const GestationalLimits = (props) => {
         console.log("test 28");
         return "Ban in the third trimester, which starts in week 28.";
       case 99:
-        return "Bans after fetal viability—ßwhen a fetus can survive outside the womb.";
+        return "Bans after fetal viability (when a fetus can survive outside the womb).";
       case null:
         return "Abortion is banned in this state.";
       default:
@@ -51,7 +51,7 @@ const GestationalLimits = (props) => {
       case "Physical":
         return "Abortion is not banned to preserve the pregnant person's life. Specifically, physical health (excluding mental health).";
       case "Any":
-        return "Abortion is not banned to preserve the pregnant person's life.  No distinctions made— between physical and/or mental health.";
+        return "Abortion is not banned to preserve the pregnant person's life.  No distinctions made. May include mental health.";
       case "Major Bodily Function":
         return "Abortion is not banned to preserve the pregnant person's life. Abortion is allowed in cases  where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
       case null:

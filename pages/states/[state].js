@@ -61,17 +61,23 @@ const State = (props) => {
         </div>
 
         <section>
-          <div className={styles.small_title}>
-            Gestational limits determined by each state that imposes a cutoff
-            after a certain time in the pregnancy when abortion is no longer
-            allowed.
+          <div className={styles.small_title}>Gestational Limits</div>
+
+          <div className={styles.note_section}>
+            <div className={styles.note_label}>Definition/Note:</div>
+
+            <div className={styles.note}>
+              Gestational limits determined by each state impose a cutoff
+              (commonly weeks after a pregnant person&apos;s last menstrual
+              period) when abortion is no longer allowed.
+            </div>
           </div>
           <GestationalLimits state={stateName} stats={props.gestData} />
         </section>
 
         <section>
           <div className={styles.small_title}>
-            {stateName} Insurance Coverage
+            State Restrictions on Health Insurance Coverage of Abortion
           </div>
           <InsuranceCoverage state={stateName} stats={props.insuranceData} />
         </section>
