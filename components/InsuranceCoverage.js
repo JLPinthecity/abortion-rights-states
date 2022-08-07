@@ -22,21 +22,14 @@ const InsuranceCoverage = (props) => {
   return (
     <div className={styles.data_wrapper}>
       <div className={styles.subsection}>
-        <div>
-          <b>
-            Insurance Coverage (abortion restrictions that specifically restrict
-            what type of insurance coverage can be used to cover abortion (both
-            Medicaid and private insurance))
-          </b>
+        <div className={styles.label}>
+          Abortion coverage by private health plans regulated by state:
         </div>
 
-        <div>
-          <b>Public insurance requires coverage:</b>
-        </div>
-        <div>
+        <div className={styles.answer}>
           {requiresCoverage
-            ? "If checked, the state requires that require private health plans regulated by the state cover abortion. These requirements do not apply to self-insured plans (in which the employer takes on all the risk, instead of contracting with a health insurer) as self-insured plans are regulated at the federal, not state, level."
-            : "This state does not have require coverage."}
+            ? "Private health plans regulated by the state are required to cover abortions. This regulation does not apply to self-insured plans (regulated at the federal versus state-level)."
+            : "This state does not have require abortion coverage by private health plans regulated by state."}
         </div>
 
         <div>

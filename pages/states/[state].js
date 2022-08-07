@@ -8,8 +8,8 @@ import {
   gestationalLimitsTableURL,
   insuranceCoverageTableURL,
 } from "../../constants/tableEndpoints";
-
 import styles from "../../styles/State.module.css";
+import Link from "next/link";
 
 export const getServerSideProps = async ({ params }) => {
   // console.log("Uncapped params:", params);
@@ -78,6 +78,20 @@ const State = (props) => {
         <section>
           <div className={styles.small_title}>
             State Restrictions on Health Insurance Coverage of Abortion
+          </div>
+
+          <div className={styles.note_section}>
+            <div className={styles.note_label}>Definition/Note:</div>
+
+            <div className={styles.note}>
+              Many state governments are limiting private and public insurance
+              coverage of abortions. Citizens living in{" "}
+              <Link href="https://www.aclu.org/issues/reproductive-freedom/abortion/bans-insurance-coverage-abortion">
+                <a target="_blank">11 states</a>
+              </Link>{" "}
+              do not have access to health insurance that covers abortions (as
+              of August 2022).
+            </div>
           </div>
           <InsuranceCoverage state={stateName} stats={props.insuranceData} />
         </section>
