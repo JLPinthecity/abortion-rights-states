@@ -45,6 +45,12 @@ const InsuranceCoverage = (props) => {
     }
   };
 
+  //boolean
+  const private_exception_rape_or_incest =
+    targetData.private_exception_rape_or_incest
+      ? targetData.private_exception_rape_or_incest
+      : null;
+
   return (
     <div className={styles.data_wrapper}>
       <div className={styles.subsection}>
@@ -89,9 +95,16 @@ const InsuranceCoverage = (props) => {
 
           <div className={styles.answer}>{privateHealthException()}</div>
 
-          <div className={styles.label}>Lethal fetal anomaly:</div>
+          <div className={styles.label}>Lethal fetal anomaly Exception:</div>
 
           <div className={styles.answer}>{privateFetalException()}</div>
+        </div>
+
+        <div className={styles.label}>RAPE OR INCEST Exception</div>
+        <div className={styles.answer}>
+          {exception_rape_or_incest
+            ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
+            : "No rape or incest exception"}
         </div>
       </div>
     </div>
