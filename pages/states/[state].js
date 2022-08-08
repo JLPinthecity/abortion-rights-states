@@ -84,13 +84,35 @@ const State = (props) => {
             <div className={styles.note_label}>Definition/Note:</div>
 
             <div className={styles.note}>
-              Many state governments are limiting private and public insurance
-              coverage of abortions. Citizens living in{" "}
-              <Link href="https://www.aclu.org/issues/reproductive-freedom/abortion/bans-insurance-coverage-abortion">
-                <a target="_blank">11 states</a>
-              </Link>{" "}
-              do not have access to health insurance that covers abortions (as
-              of August 2022).
+              <p>
+                Many states have passed laws that restrict health insurance
+                coverage of abortions—this may include Medicaid, private, and
+                state Marketplace plans (available with the passage of the{" "}
+                <Link href="https://www.healthcare.gov/glossary/affordable-care-act">
+                  <a target="_blank">Affordable Care Act</a>
+                </Link>{" "}
+                in 2010).
+              </p>
+              <p>
+                Below, private health insurance refers to plans *regulated by
+                the state*. State restrictions on abortion coverage do not apply
+                to self-insured plans (commonly when the employer takes on all
+                the risk versus contracting with a health insurer) versus
+                self-insured plans regulated at the federal level.
+              </p>
+              <p>
+                The Hyde Amendment (originally passed in 1977 after the 1973’s
+                Roe v. Wade Supreme Court Decision) bars federal dollars to be
+                used to cover abortions, with exceptions to save the life of a
+                pregnant person and when a pregnancy results from rape or
+                incest.
+              </p>
+              <p>
+                Since the ACA passage in 2010, many antiabortion conservatives
+                have helped pass restrictions on private health insurance that
+                are more restrictive than the Hyde limitations and banned
+                abortion coverage completely from state Marketplace plans.
+              </p>
             </div>
           </div>
           <InsuranceCoverage state={stateName} stats={props.insuranceData} />

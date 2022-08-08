@@ -36,13 +36,14 @@ const InsuranceCoverage = (props) => {
     <div className={styles.data_wrapper}>
       <div className={styles.subsection}>
         <div className={styles.label}>
-          Abortion coverage by private health plans regulated by state:
+          Does the state require abortion coverage by private health plans
+          regulated by state?
         </div>
 
         <div className={styles.answer}>
           {requiresCoverage
-            ? "Private health plans regulated by the state are required to cover abortions. This regulation does not apply to self-insured plans (regulated at the federal versus state-level)."
-            : "This state does not have require abortion coverage by private health plans regulated by state."}
+            ? "Yes, private health plans regulated by the state are required to cover abortions. This regulation does not apply to self-insured plans regulated at the federal versus the state level)."
+            : "No, this state does not have require abortion coverage by private health plans regulated by state."}
         </div>
 
         <div className={styles.label}>
@@ -53,11 +54,11 @@ const InsuranceCoverage = (props) => {
         <div className={styles.answer}>
           {privateCoverage
             ? "Private insurance may cover abortion but not necessarily required to."
-            : "This state does not have require coverage. Private insurance does not cover abortion."}
+            : "This state does not have require coverage and private insurance cannot cover abortion."}
         </div>
 
         <div>
-          <h3 className={styles.label}>
+          <h3 className={styles.secondary_label}>
             <i>EXCEPTIONS TO ABORTION COVERAGE RESTRICTIONS</i>
           </h3>
 
