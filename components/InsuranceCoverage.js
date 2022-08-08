@@ -19,6 +19,10 @@ const InsuranceCoverage = (props) => {
     ? targetData.private_exception_life
     : null;
 
+  const private_exception_fetal = targetData.private_exception_fetal
+    ? targetData.private_exception_fetal
+    : null;
+
   const private_exception_health = targetData.private_exception_health
     ? targetData.exception_health
     : null;
@@ -29,6 +33,15 @@ const InsuranceCoverage = (props) => {
         return "This state allows private insurance coverage when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
       default:
         return "No exceptions for serious health conditions specified.";
+    }
+  };
+
+  const privateFetalException = () => {
+    switch (private_exception_fetal) {
+      case "Lethal fetal anomaly":
+        return "This state allows private insurance coverage when the fetus has a lethal fetal anomaly.";
+      default:
+        return "No exceptions for lethal fetal anomalies specified.";
     }
   };
 
@@ -59,10 +72,10 @@ const InsuranceCoverage = (props) => {
 
         <div>
           <h3 className={styles.secondary_label}>
-            <i>EXCEPTIONS TO ABORTION COVERAGE RESTRICTIONS</i>
+            <i>EXCEPTIONS TO STATE ABORTION-COVERAGE RESTRICTIONS</i>
           </h3>
 
-          <div className={styles.label}>Life-saving exemption:</div>
+          <div className={styles.label}>Life-saving exception:</div>
 
           <div className={styles.answer}>
             {privateLifeException
@@ -71,10 +84,14 @@ const InsuranceCoverage = (props) => {
           </div>
 
           <div className={styles.label}>
-            Exemption for a serious health condition:
+            Serious health condition exception:
           </div>
 
           <div className={styles.answer}>{privateHealthException()}</div>
+
+          <div className={styles.label}>Lethal fetal anomaly:</div>
+
+          <div className={styles.answer}>{privateFetalException()}</div>
         </div>
       </div>
     </div>
