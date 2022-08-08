@@ -1,3 +1,4 @@
+import { style } from "@mui/system";
 import styles from "../styles/Section.module.css";
 
 const InsuranceCoverage = (props) => {
@@ -51,9 +52,23 @@ const InsuranceCoverage = (props) => {
       ? targetData.private_exception_rape_or_incest
       : null;
 
+  //boolean
+  const exchange_coverage_no_restrictions =
+    targetData.exchange_coverage_no_restrictions
+      ? targetData.exchange_coverage_no_restrictions
+      : null;
+
+  //STATE MARKETPLACE -- boolean
+  const exchange_exception_life = targetData.exchange_exception_life
+    ? targetData.exchange_exception_life
+    : null;
+
   return (
     <div className={styles.data_wrapper}>
       <div className={styles.subsection}>
+        <div className={styles.insurance_type}>
+          Private health insurance plans
+        </div>
         <div className={styles.label}>
           Does the state require abortion coverage by private health plans
           regulated by state?
@@ -78,7 +93,10 @@ const InsuranceCoverage = (props) => {
 
         <div>
           <h3 className={styles.secondary_label}>
-            <i>EXCEPTIONS TO STATE ABORTION-COVERAGE RESTRICTIONS</i>
+            <i>
+              EXCEPTIONS TO PRIVATE HEALTH INSURANCE ABORTION-COVERAGE
+              RESTRICTIONS:
+            </i>
           </h3>
 
           <div className={styles.label}>Life-saving exception:</div>
@@ -100,11 +118,40 @@ const InsuranceCoverage = (props) => {
           <div className={styles.answer}>{privateFetalException()}</div>
         </div>
 
-        <div className={styles.label}>RAPE OR INCEST Exception</div>
+        <div className={styles.label}>RAPE OR INCEST Exception:</div>
         <div className={styles.answer}>
-          {exception_rape_or_incest
+          {private_exception_rape_or_incest
             ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
-            : "No rape or incest exception"}
+            : "No rape or incest exception."}
+        </div>
+
+        <div className={styles.insurance_type}>
+          State Marketplace insurance plans
+        </div>
+
+        <div className={styles.label}>
+          Are there restrictions on abortion coverage with health plans offered
+          in the state&apos;s Health Care Exchange?
+        </div>
+        <div className={styles.answer}>
+          {exchange_coverage_no_restrictions
+            ? "There are no restrictions on abortion coverage in Affordable Care Act plans. **However, a lack of restrictions does not mean every plan available through the Health Insurance Marketplace® (also known as the “Marketplace” or “exchange”) will cover abortion procedures."
+            : "Restricted abortion coverage in ACA plans."}
+        </div>
+
+        <h3 className={styles.secondary_label}>
+          <i>
+            EXCEPTIONS TO ABORTION-COVERAGE RESTRICTIONS ON STATE MARKETPLACE
+            PLANS:
+          </i>
+        </h3>
+
+        <div className={styles.label}>Life-saving exception:</div>
+
+        <div className={styles.answer}>
+          {exchange_exception_life
+            ? "Despite other restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
+            : "No life-saving exemption"}
         </div>
       </div>
     </div>

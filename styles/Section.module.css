@@ -23,3 +23,16 @@
     font-family: 'Jost';
     text-transform: uppercase;
 }
+
+
+.insurance_type{
+    font-family: 'Zilla Slab', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    color: orange;
+    text-align: center;
+    padding-bottom: 1rem;
+
+}
