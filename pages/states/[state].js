@@ -3,6 +3,7 @@ import titleCase from "../../constants/titleCase";
 import axios from "axios";
 import GestationalLimits from "../../components/GestationalLimits";
 import InsuranceCoverage from "../../components/InsuranceCoverage";
+import Minors from "../../components/Minors";
 import {
   token,
   gestationalLimitsTableURL,
@@ -135,6 +136,14 @@ const State = (props) => {
             </div>
           </div>
           <InsuranceCoverage state={stateName} stats={props.insuranceData} />
+        </section>
+
+        <section>
+          <div className={styles.small_title}>
+            Laws and policies relating to minors' abortions
+          </div>
+
+          <Minors />
         </section>
       </div>
     </div>
