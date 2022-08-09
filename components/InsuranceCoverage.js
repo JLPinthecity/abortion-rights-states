@@ -28,6 +28,14 @@ const InsuranceCoverage = (props) => {
     ? targetData.exception_health
     : null;
 
+  const exchange_exception_health = targetData.exchange_exception_health
+    ? targetData.exchange_exception_health
+    : null;
+
+  const exchange_exception_fetal = targetData.exchange_exception_fetal
+    ? targetData.exchange_exception_fetal
+    : null;
+
   const privateHealthException = () => {
     switch (private_exception_health) {
       case "major bodily function":
@@ -62,6 +70,27 @@ const InsuranceCoverage = (props) => {
   const exchange_exception_life = targetData.exchange_exception_life
     ? targetData.exchange_exception_life
     : null;
+
+  //STATE MARKETPLACE -- "major bodily function" or "physical"
+  const exchangeExceptionHealth = () => {
+    switch (exchange_exception_health) {
+      case "major bodily function":
+        return "This state allows ACA plan coverage of abortion when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+      case "physical":
+        return "This state allows ACA plan coverage of abortion when the pregnant person's faces serious impacts on 'physical' health.";
+      default:
+        return "No exceptions for serious health conditions specified.";
+    }
+  };
+
+  const exchangeFetalException = () => {
+    switch (exchange_exception_fetal) {
+      case "Lethal fetal anomaly":
+        return "This state allows ACA plans to cover anabortion when the fetus has a lethal fetal anomaly.";
+      default:
+        return "No exceptions for lethal fetal anomalies specified.";
+    }
+  };
 
   return (
     <div className={styles.data_wrapper}>
@@ -150,9 +179,17 @@ const InsuranceCoverage = (props) => {
 
         <div className={styles.answer}>
           {exchange_exception_life
-            ? "Despite other restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
+            ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
             : "No life-saving exemption"}
         </div>
+
+        <div className={styles.label}>Serious health condition exception:</div>
+
+        <div className={styles.answer}>{exchangeExceptionHealth()}</div>
+
+        <div className={styles.label}>Lethal fetal anomaly Exception:</div>
+
+        <div className={styles.answer}>{exchangeFetalException()}</div>
       </div>
     </div>
   );
