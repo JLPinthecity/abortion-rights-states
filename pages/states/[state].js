@@ -11,6 +11,8 @@ import {
 import styles from "../../styles/State.module.css";
 import Link from "next/link";
 
+//REMINDER THAT TO GET DATA IN THIS COMPONENT AND PASS TO SEPARATE COMPONENTS FROM HERE
+
 export const getServerSideProps = async ({ params }) => {
   // console.log("Uncapped params:", params);
   // console.log("Params from URL: ", titleCase(params.state));
