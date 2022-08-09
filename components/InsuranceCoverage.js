@@ -1,4 +1,3 @@
-import { style } from "@mui/system";
 import styles from "../styles/Section.module.css";
 
 const InsuranceCoverage = (props) => {
@@ -45,7 +44,6 @@ const InsuranceCoverage = (props) => {
     }
   };
 
-  //boolean
   const private_exception_rape_or_incest =
     targetData.private_exception_rape_or_incest
       ? targetData.private_exception_rape_or_incest
@@ -96,12 +94,18 @@ const InsuranceCoverage = (props) => {
     }
   };
 
+  const exchange_forbids_coverage = targetData.exchange_forbids_coverage
+    ? targetData.exchange_forbids_coverage
+    : null;
+
+  // MEDICAID
+
   return (
     <div className={styles.data_wrapper}>
+      <div className={styles.insurance_type}>
+        Private health insurance plans
+      </div>
       <div className={styles.subsection}>
-        <div className={styles.insurance_type}>
-          Private health insurance plans
-        </div>
         <div className={styles.label}>
           Does the state require abortion coverage by private health plans
           regulated by state?
@@ -157,9 +161,21 @@ const InsuranceCoverage = (props) => {
             ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
             : "No rape or incest exception."}
         </div>
+      </div>
 
-        <div className={styles.insurance_type}>
-          State Marketplace insurance plans
+      <div className={styles.insurance_type}>
+        State marketplace insurance plans
+      </div>
+
+      <div className={styles.subsection}>
+        <div className={styles.label}>
+          Does this state prohibit any and all exchange insurance coverage for
+          abortion?
+        </div>
+        <div className={styles.answer}>
+          {exchange_exception_rape_or_incest
+            ? "Yes, this state prohibits any and all exchange insurance coverage of abortion."
+            : "No, this state does not forbid any and all exchange insurance coverage of abortion."}
         </div>
 
         <div className={styles.label}>
@@ -194,21 +210,16 @@ const InsuranceCoverage = (props) => {
         <div className={styles.label}>Lethal fetal anomaly Exception:</div>
 
         <div className={styles.answer}>{exchangeFetalException()}</div>
-      </div>
 
-      <div className={styles.label}>RAPE OR INCEST Exception:</div>
-      <div className={styles.answer}>
-        {exchange_exception_rape_or_incest
-          ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
-          : "No rape or incest exception."}
+        <div className={styles.label}>RAPE OR INCEST Exception:</div>
+        <div className={styles.answer}>
+          {exchange_exception_rape_or_incest
+            ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
+            : "No rape or incest exception."}
+        </div>
       </div>
     </div>
   );
 };
 
 export default InsuranceCoverage;
-
-// exchange_coverage_no_restrictions: true
-// medicaid_coverage_provider_patient_decision: true
-// medicaid_exception_life: true
-// requires_coverage: true
