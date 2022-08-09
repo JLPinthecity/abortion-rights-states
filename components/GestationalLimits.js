@@ -1,7 +1,7 @@
 import styles from "../styles/Section.module.css";
 
 const GestationalLimits = (props) => {
-  debugger;
+  // debugger;
   const state = props.state;
 
   const targetData = props.stats[state];

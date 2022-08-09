@@ -8,6 +8,8 @@ import {
   token,
   gestationalLimitsTableURL,
   insuranceCoverageTableURL,
+  minorsTableURL,
+  waitingPeriodsTableURL,
 } from "../../constants/tableEndpoints";
 import styles from "../../styles/State.module.css";
 import Link from "next/link";
@@ -19,6 +21,7 @@ export const getServerSideProps = async ({ params }) => {
   // console.log("Params from URL: ", titleCase(params.state));
   const state = titleCase(params.state);
 
+  //AXIOS GET REQUESTS
   const gestLimits = await axios.get(`${gestationalLimitsTableURL}/${state}`, {
     headers: {
       token: `${token}`,
@@ -34,16 +37,25 @@ export const getServerSideProps = async ({ params }) => {
     }
   );
 
-  // console.log("Return from API:", gestLimits.data);
+  const minors = await axios.get(`${minorsTableURL}/${state}`, {
+    headers: {
+      token: `${token}`,
+    },
+  });
+
+  // console.log("Return from API:", minorsData.data);
 
   return {
-    props: { gestData: gestLimits.data, insuranceData: insuranceCov.data },
+    props: {
+      gestData: gestLimits.data,
+      insuranceData: insuranceCov.data,
+      minorsData: minors.data,
+    },
   };
 };
 
 const State = (props) => {
-  // debugger;
-  // console.log("gestData destructured from props:", props);
+  console.log("minorsData destructured from props:", props);
   const router = useRouter();
   const stateNameFromUrl = router.query.state;
   const stateName = titleCase(stateNameFromUrl);
@@ -140,10 +152,10 @@ const State = (props) => {
 
         <section>
           <div className={styles.small_title}>
-            Laws and policies relating to minors' abortions
+            State abortion restrictions on minors
           </div>
 
-          <Minors />
+          <Minors state={stateName} stats={props.minorsData} />
         </section>
       </div>
     </div>
