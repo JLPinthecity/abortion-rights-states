@@ -113,6 +113,23 @@ const State = (props) => {
                 are more restrictive than the Hyde limitations and banned
                 abortion coverage completely from state Marketplace plans.
               </p>
+
+              <p>
+                <Link href="https://www.medicaid.gov/medicaid/index.html">
+                  <a target="_blank">Medicaid</a>
+                </Link>{" "}
+                is a state and federal program that provides health insurance to
+                &quot;eligible low-income adults, children, pregnant women,
+                elderly adults and people with disabilities.&quot;
+              </p>
+              <p>
+                States are required only to use Medicaid funds to pay for
+                abortion in cases of rape, of incest, or when the pregnant
+                person&apos;s life is endangered; these are also the only
+                circumstances in which federal Medicaid funds may be used to pay
+                for abortion, per the Hyde limitations. Some states offer
+                additional coverage.
+              </p>
             </div>
           </div>
           <InsuranceCoverage state={stateName} stats={props.insuranceData} />

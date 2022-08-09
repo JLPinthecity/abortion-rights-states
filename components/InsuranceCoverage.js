@@ -100,6 +100,11 @@ const InsuranceCoverage = (props) => {
 
   // MEDICAID
 
+  const medicaid_coverage_provider_patient_decision =
+    targetData.medicaid_coverage_provider_patient_decision
+      ? targetData.medicaid_coverage_provider_patient_decision
+      : null;
+
   return (
     <div className={styles.data_wrapper}>
       <div className={styles.insurance_type}>
@@ -217,6 +222,21 @@ const InsuranceCoverage = (props) => {
             ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
             : "No rape or incest exception."}
         </div>
+      </div>
+
+      <div className={styles.insurance_type}>Medicaid </div>
+
+      <div className={styles.label}>
+        Does this state have a policy in place to use Medicaid funds to cover
+        abortion?
+        <br></br>(Most policies require coverage for &quot;medically
+        necessary&quot; abortion at the discretion of the pregnant person and
+        their medical provider.)
+      </div>
+      <div className={styles.answer}>
+        {medicaid_coverage_provider_patient_decision
+          ? "Yes, this state has a policy in place to use Medicaid funds to pay for abortion."
+          : "No, this state does not have a policy in place for Medicaid funds to cover abortion."}
       </div>
     </div>
   );
