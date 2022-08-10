@@ -3,7 +3,7 @@ import styles from "../styles/Section.module.css";
 const WaitingPeriods = (props) => {
   const state = props.state;
 
-  const stateDataExists = props.stats === {} ? true : false;
+  const stateDataExists = JSON.stringify(props.stats) === "{}" ? false : true;
 
   debugger;
 
