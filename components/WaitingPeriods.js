@@ -5,29 +5,39 @@ const WaitingPeriods = (props) => {
 
   const stateDataExists = JSON.stringify(props.stats) === "{}" ? false : true;
 
-  debugger;
-
   if (stateDataExists) {
     //IF THE STATE DATA EXISTS FROM THE WAITING PERIODS TABLE, DEFINE DESTRUCTURE TARGETDATA
 
-    targetData = props.stats[state];
+    const targetData = props.stats[state];
+
+    const waitingPeriod = targetData.waiting_period_hours
+      ? targetData.waiting_period_hours
+      : null;
+
+    // debugger;
+
     return (
       <div className={styles.data_wrapper}>
         <div className={styles.label}>
-          Mandated waiting period (number of hours someone must wait to obtain
-          an abortion after receiving state-mandated abortion counseling):
+          The state-mandated waiting period (number of hours someone must wait
+          to obtain an abortion after receiving state-mandated abortion
+          counseling):
         </div>
-        <p>NOTE:</p>Weekends and holidays do not count towards the 72-hour
-        waiting period.
-        <div className={styles.answer}></div>
-        <div className={styles.label}>Requirements:</div>
-        <div className={styles.answer}></div>
-        <div className={styles.label}>Health exception:</div>
-        <div className={styles.answer}></div>
       </div>
     );
   } else {
-    return <div>Not applicable</div>;
+    return (
+      <div>
+        <p>
+          Many states require a pregnant person to attend a counseling session
+          and waiting a designated amount of time before obtaining an abortion.
+        </p>
+        <p>
+          {state} does not require you to attend a counseling session or go
+          through a waiting period before getting an abortion.
+        </p>
+      </div>
+    );
   }
 };
 
