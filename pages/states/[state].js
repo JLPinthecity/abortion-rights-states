@@ -4,6 +4,7 @@ import axios from "axios";
 import GestationalLimits from "../../components/GestationalLimits";
 import InsuranceCoverage from "../../components/InsuranceCoverage";
 import Minors from "../../components/Minors";
+import WaitingPeriods from "../../components/WaitingPeriods";
 import {
   token,
   gestationalLimitsTableURL,
@@ -14,7 +15,7 @@ import {
 import styles from "../../styles/State.module.css";
 import Link from "next/link";
 
-//REMINDER THAT TO GET DATA IN THIS COMPONENT AND PASS TO SEPARATE COMPONENTS FROM HERE
+//REMINDER THAT WE GET DATA IN THIS COMPONENT AND PASS TO SEPARATE COMPONENTS FROM HERE
 
 export const getServerSideProps = async ({ params }) => {
   // console.log("Uncapped params:", params);
@@ -43,6 +44,12 @@ export const getServerSideProps = async ({ params }) => {
     },
   });
 
+  const waiting = await axios.get(`${waitingPeriodsTableURL}/${state}`, {
+    headers: {
+      token: `${token}`,
+    },
+  });
+
   // console.log("Return from API:", minorsData.data);
 
   return {
@@ -50,12 +57,13 @@ export const getServerSideProps = async ({ params }) => {
       gestData: gestLimits.data,
       insuranceData: insuranceCov.data,
       minorsData: minors.data,
+      waitingData: waiting.data,
     },
   };
 };
 
 const State = (props) => {
-  console.log("minorsData destructured from props:", props);
+  // console.log("minorsData destructured from props:", props);
   const router = useRouter();
   const stateNameFromUrl = router.query.state;
   const stateName = titleCase(stateNameFromUrl);
@@ -156,6 +164,14 @@ const State = (props) => {
           </div>
 
           <Minors state={stateName} stats={props.minorsData} />
+        </section>
+
+        <section>
+          <div className={styles.small_title}>
+            State-mandated waiting periods
+          </div>
+
+          <WaitingPeriods state={stateName} stats={props.waitingData} />
         </section>
       </div>
     </div>
