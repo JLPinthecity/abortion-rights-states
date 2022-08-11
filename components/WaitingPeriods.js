@@ -29,7 +29,7 @@ const WaitingPeriods = (props) => {
       }
     };
 
-    debugger;
+    // debugger;
 
     const counseling_waived_condition = targetData.counseling_waived_condition
       ? targetData.counseling_waived_condition
