@@ -171,6 +171,31 @@ const State = (props) => {
             State-mandated waiting periods
           </div>
 
+          <div className={styles.note_section}>
+            <div className={styles.note_label}>Definition/Note:</div>
+
+            <div className={styles.note}>
+              <p>
+                Individual states determine what material is covered during the
+                abortion counseling sessions.
+              </p>
+
+              <p>
+                Some states mandate a pregnant person receive written materials.
+              </p>
+
+              <p>
+                As of August 2022, 30 states require the gestational age of the
+                fetus be disclosed during counseling. Twelve states require
+                counseling cover information on the fetus's ability of a to feel
+                pain, according to the Guttmacher Institute. Five states require
+                that patients be told that personhood begins at conception. This
+                information may be considered misleading.
+                [https://www.guttmacher.org/state-policy/explore/counseling-and-waiting-periods-abortion#:~:text=Nearly%20all%20the%20states%20that,about%20all%20common%20abortion%20procedures.]
+              </p>
+            </div>
+          </div>
+
           <WaitingPeriods state={stateName} stats={props.waitingData} />
         </section>
       </div>

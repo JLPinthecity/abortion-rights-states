@@ -29,6 +29,10 @@ const WaitingPeriods = (props) => {
       }
     };
 
+    const counseling_waived_condition = targetData.counseling_waived_condition
+      ? targetData.counseling_waived_condition
+      : "Not applicable";
+
     return (
       <div className={styles.data_wrapper}>
         <div className={styles.label}>
@@ -41,29 +45,11 @@ const WaitingPeriods = (props) => {
           person&apos;s health or life is threatened.
         </div>
 
-        <div className={styles.label}>What counseling is required?</div>
-        <div className={styles.answer}>
-          {numOfCounselingVisits()}
+        <div className={styles.label}>Is counseling required?</div>
+        <div className={styles.answer}>{numOfCounselingVisits()}</div>
 
-          <p>
-            Individual states determine what material is covered during the
-            abortion counseling sessions.
-          </p>
-
-          <p>
-            Some states mandate a pregnant person receive written materials.
-          </p>
-
-          <p>
-            As of August 2022, 30 states require the gestational age of the
-            fetus be disclosed during counseling. Twelve states require
-            counseling cover information on the fetus's ability of a to feel
-            pain, according to the Guttmacher Institute. Five states require
-            that patients be told that personhood begins at conception. This
-            information may be considered misleading.
-            [https://www.guttmacher.org/state-policy/explore/counseling-and-waiting-periods-abortion#:~:text=Nearly%20all%20the%20states%20that,about%20all%20common%20abortion%20procedures.]
-          </p>
-        </div>
+        <div className={styles.label}>Counseling waived condition: </div>
+        <div className={styles.answer}>{counseling_waived_condition} </div>
       </div>
     );
   } else {
