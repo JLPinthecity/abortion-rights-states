@@ -20,14 +20,16 @@ const WaitingPeriods = (props) => {
 
     const numOfCounselingVisits = () => {
       switch (counseling_visits) {
-        case "1":
+        case 1:
           return "Abortion counseling session required by the state, which typically covers information about the abortion procedure and fetal development.";
-        case "2":
+        case 2:
           return "Abortion counseling or ultrasound must be obtained at the facility before the waiting period begins, requiring two trips to the clinic.";
         default:
           return "No counseling required.";
       }
     };
+
+    debugger;
 
     const counseling_waived_condition = targetData.counseling_waived_condition
       ? targetData.counseling_waived_condition

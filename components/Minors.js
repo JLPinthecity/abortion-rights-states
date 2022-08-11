@@ -1,7 +1,6 @@
 import styles from "../styles/Section.module.css";
 
 const Minors = (props) => {
-  //   console.log("from minors component", props);
   const state = props.state;
 
   const targetData = props.stats[state];
@@ -14,19 +13,28 @@ const Minors = (props) => {
     ? targetData.allows_minor_to_consent_to_abortion
     : null;
 
-  debugger;
-
   if (minorsAllowedConsent) {
-    //   const targetData = props.stats[state];
-    //   debugger;
-    //   let ageOfRestrictions;
-    //   if (targetData.below_age != undefined || targetData.below_age != null) {
-    //     ageOfRestrictions = targetData.below_age;
-    //   }
-    //boolean
-    //   const parental_consent_required = targetData.parental_consent_required
-    //     ? targetData.parental_consent_required
-    //     : null;
+    return (
+      <div className={styles.data_wrapper}>
+        <div className={styles.label}>Allows minors to consent:</div>
+
+        <div className={styles.answer}>
+          This state either explicitly grants minor adolescents the ability to
+          obtain an abortion through the law or implicitly allows minors to
+          consent without parental involvement (because no law expressly
+          requires parental involvement or because a parental involvement law
+          was struck down in the courts).
+        </div>
+      </div>
+    );
+  } else {
+    //int
+    const below_age = targetData.below_age ? targetData.below_age : null;
+
+    // boolean
+    const parental_consent_required = targetData.parental_consent_required
+      ? targetData.parental_consent_required
+      : null;
     //   //boolean
     //   const parental_notification_required =
     //     targetData.parental_notification_required
@@ -52,22 +60,22 @@ const Minors = (props) => {
     //     ? targetData.judicial_bypass_available
     //     : null;
     //boolean
-
     return (
       <div className={styles.data_wrapper}>
-        <div className={styles.label}>Allows minors to consent:</div>
+        <div className={styles.label}>
+          Age below which restrictions apply in state:
+        </div>
 
+        <div className={styles.answer}>{below_age} years old</div>
+
+        <div className={styles.label}>Parental consent requirement:</div>
         <div className={styles.answer}>
-          This state either explicitly grants minor adolescents the ability to
-          obtain an abortion through the law or implicitly allows minors to
-          consent without parental involvement (because no law expressly
-          requires parental involvement or because a parental involvement law
-          was struck down in the courts).
+          {parental_consent_required
+            ? "In this state, parental consent from a parent or parents is required for a minor to obtain an abortion."
+            : "Parental consent is not required."}
         </div>
       </div>
     );
-  } else {
-    return <div>test</div>;
   }
 };
 
