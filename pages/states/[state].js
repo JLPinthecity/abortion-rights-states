@@ -187,11 +187,10 @@ const State = (props) => {
               <p>
                 As of August 2022, 30 states require the gestational age of the
                 fetus be disclosed during counseling. Twelve states require
-                counseling cover information on the fetus's ability of a to feel
-                pain, according to the Guttmacher Institute. Five states require
-                that patients be told that personhood begins at conception. This
-                information may be considered misleading.
-                [https://www.guttmacher.org/state-policy/explore/counseling-and-waiting-periods-abortion#:~:text=Nearly%20all%20the%20states%20that,about%20all%20common%20abortion%20procedures.]
+                counseling cover information on the fetus&apos;s ability of a to
+                feel pain, according to the Guttmacher Institute. Five states
+                require that patients be told that personhood begins at
+                conception.
               </p>
             </div>
           </div>
