@@ -232,36 +232,38 @@ const InsuranceCoverage = (props) => {
               : "Restricted abortion coverage in ACA plans."}
           </div>
 
-          <h3 className={styles.secondary_label}>
-            <i>
-              EXCEPTIONS TO ABORTION-COVERAGE RESTRICTIONS ON STATE MARKETPLACE
-              PLANS:
-            </i>
-          </h3>
+          <div className={styles.exceptions}>
+            <h3 className={styles.secondary_label}>
+              <i>
+                EXCEPTIONS TO ABORTION-COVERAGE RESTRICTIONS ON STATE
+                MARKETPLACE PLANS:
+              </i>
+            </h3>
 
-          <div className={styles.label}>Life-saving exception:</div>
+            <div className={styles.label}>Life-saving exception:</div>
 
-          <div className={styles.answer}>
-            {exchange_exception_life
-              ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
-              : "No life-saving exemption"}
-          </div>
+            <div className={styles.answer}>
+              {exchange_exception_life
+                ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
+                : "No life-saving exemption"}
+            </div>
 
-          <div className={styles.label}>
-            Serious health condition exception:
-          </div>
+            <div className={styles.label}>
+              Serious health condition exception:
+            </div>
 
-          <div className={styles.answer}>{exchangeExceptionHealth()}</div>
+            <div className={styles.answer}>{exchangeExceptionHealth()}</div>
 
-          <div className={styles.label}>Lethal fetal anomaly Exception:</div>
+            <div className={styles.label}>Lethal fetal anomaly Exception:</div>
 
-          <div className={styles.answer}>{exchangeFetalException()}</div>
+            <div className={styles.answer}>{exchangeFetalException()}</div>
 
-          <div className={styles.label}>RAPE OR INCEST Exception:</div>
-          <div className={styles.answer}>
-            {exchange_exception_rape_or_incest
-              ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
-              : "No rape or incest exception."}
+            <div className={styles.label}>RAPE OR INCEST Exception:</div>
+            <div className={styles.answer}>
+              {exchange_exception_rape_or_incest
+                ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
+                : "No rape or incest exception."}
+            </div>
           </div>
         </div>
       </section>
@@ -281,7 +283,7 @@ const InsuranceCoverage = (props) => {
             : "No, this state does not have a policy in place for Medicaid funds to cover abortion."}
         </div>
         {!medicaid_coverage_provider_patient_decision && (
-          <div>
+          <div className={styles.exceptions}>
             <h3 className={styles.secondary_label}>
               <i>EXCEPTIONS TO MEDICAID ABORTION-COVERAGE RESTRICTIONS:</i>
             </h3>
