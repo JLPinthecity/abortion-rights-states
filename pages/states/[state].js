@@ -176,21 +176,22 @@ const State = (props) => {
 
             <div className={styles.note}>
               <p>
+                Many states require a pregnant person to attend a counseling
+                session (or two) and wait a designated amount of time before
+                getting an abortion.
+              </p>
+              <p>
                 Individual states determine what material is covered during the
                 abortion counseling sessions.
               </p>
 
               <p>
-                Some states mandate a pregnant person receive written materials.
-              </p>
-
-              <p>
                 As of August 2022, 30 states require the gestational age of the
                 fetus be disclosed during counseling. Twelve states require
-                counseling cover information on the fetus&apos;s ability of a to
+                counseling to cover information on the fetus&apos;s ability to
                 feel pain, according to the Guttmacher Institute. Five states
                 require that patients be told that personhood begins at
-                conception.
+                conception. Some content may be considered biased or misleading.
               </p>
             </div>
           </div>

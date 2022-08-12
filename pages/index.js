@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import SelectState from "../components/SelectState";
 
 export default function Home(props) {
-  // debugger;
   const router = useRouter();
 
   const getStateFullName = (stateAbbr) => {

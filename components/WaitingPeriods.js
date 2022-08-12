@@ -58,10 +58,6 @@ const WaitingPeriods = (props) => {
     return (
       <div>
         <p>
-          Many states require a pregnant person to attend a counseling session
-          and waiting a designated amount of time before obtaining an abortion.
-        </p>
-        <p>
           {state} does not require you to attend a counseling session or go
           through a waiting period before getting an abortion.
         </p>

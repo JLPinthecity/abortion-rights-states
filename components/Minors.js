@@ -16,14 +16,16 @@ const Minors = (props) => {
   if (minorsAllowedConsent) {
     return (
       <div className={styles.data_wrapper}>
-        <div className={styles.label}>Allows minors to consent:</div>
-
         <div className={styles.answer}>
-          This state either explicitly grants minor adolescents the ability to
-          obtain an abortion through the law or implicitly allows minors to
-          consent without parental involvement (because no law expressly
-          requires parental involvement or because a parental involvement law
-          was struck down in the courts).
+          <p>{state} allows minors to consent abortion.</p>
+
+          <p>
+            This state either explicitly grants minor adolescents the ability to
+            obtain an abortion through the law or implicitly allows minors to
+            consent without parental involvement (because no law expressly
+            requires parental involvement or because a parental involvement law
+            was struck down in the courts).
+          </p>
         </div>
       </div>
     );

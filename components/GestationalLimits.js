@@ -17,11 +17,11 @@ const GestationalLimits = (props) => {
       switch (banned) {
         case 28:
           console.log("test 28");
-          return "Ban in the third trimester, which starts in week 28.";
+          return "Ban in the third trimester, which starts in week 28";
         case 99:
-          return "Bans after fetal viability (when a fetus can survive outside the womb.";
+          return "Bans after fetal viability (when a fetus can survive outside the womb)";
         case null:
-          return "Abortion is banned in this state.";
+          return "Abortion is banned in this state";
         default:
           return `${banned} weeks since Last Menstrual Period (LMP)`;
       }
@@ -50,11 +50,11 @@ const GestationalLimits = (props) => {
     const distinction_to_life_saving_exemption = () => {
       switch (exception_health) {
         case "Physical":
-          return "Abortion is not banned to preserve the pregnant person's life. Specifically, physical health (excluding mental health).";
+          return "Abortion is allowed to preserve the pregnant person's life. Specifically, physical health (excluding mental health).";
         case "Any":
-          return "Abortion is not banned to preserve the pregnant person's life.  No distinctions made— between physical and/or mental health.";
+          return "Abortion is allowed to preserve the pregnant person's life. There is no distinction made between physical and mental health.";
         case "Major Bodily Function":
-          return "Abortion is not banned to preserve the pregnant person's life. Abortion is allowed in cases  where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
+          return "Abortion is allowed to preserve the pregnant person's life. Abortion is allowed in cases where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
         case null:
           return "No distinctions specified";
         default:
@@ -65,9 +65,9 @@ const GestationalLimits = (props) => {
     const fetal_health_exemption = () => {
       switch (exception_health) {
         case "Serious fetal anomaly":
-          return "Abortion is not banned based on the health or status of the fetus. Exceptions in place for serious fetal anomalites versus lethal ones.";
+          return "Abortion is allowed based on the health or status of the fetus. Exceptions are in place for serious fetal anomalites.";
         case "Lethal fetal anomaly":
-          return "Abortion is not banned based on the health or status of the fetus. Exceptions in place for lethal fetal anomalites versus serious ones.";
+          return "Abortion is allowed based on the health or status of the fetus. Exceptions in place for lethal fetal anomalites.";
         default:
           return "No exceptions for fetal anomalies specified.";
       }
