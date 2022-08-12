@@ -49,7 +49,6 @@ const Minors = (props) => {
     const num_parents_required = () => {
       switch (parents_required) {
         case 1:
-          console.log("test 28");
           return "One parent must be notified. **Many, but not all, states have extended the definition of 'parent' to include other adult guardians.";
         case 2:
           return "Both parents of the minor must be notified. **Many, but not all, states have extended the definition of 'parent' to include other adult guardians.";
