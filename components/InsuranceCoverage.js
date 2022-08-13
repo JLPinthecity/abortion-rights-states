@@ -13,7 +13,7 @@ const InsuranceCoverage = (props) => {
   };
 
   const getStyle = () => {
-    if (submitted) return styles.showContent;
+    if (showMore) return styles.showContent;
     else return styles.hideContent;
   };
 
@@ -162,7 +162,7 @@ const InsuranceCoverage = (props) => {
         IF SHOWMORE IS FALSE(DEFAULT), SHOW + */}
         <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
 
-        <div className={styles.content}>
+        <div className={getStyle()}>
           <div className={styles.label}>
             Does the state require abortion coverage by private health plans
             regulated by state?

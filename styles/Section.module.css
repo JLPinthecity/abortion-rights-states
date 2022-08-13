@@ -33,8 +33,15 @@
     color: orange;
     text-align: center;
     padding-bottom: 1rem;
-
 }
 
-
 /* EXPAND CONTENT */
+
+
+.hideContent{
+color: red;
+}
+
+.showContent{
+color: blue;
+}

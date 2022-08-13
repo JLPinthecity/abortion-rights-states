@@ -4,7 +4,7 @@ const GestationalLimits = (props) => {
   const state = props.state;
 
   const stateDataExists = JSON.stringify(props.stats) === "{}" ? false : true;
-  debugger;
+  // debugger;
 
   if (stateDataExists) {
     const targetData = props.stats[state];
