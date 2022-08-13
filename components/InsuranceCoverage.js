@@ -1,9 +1,17 @@
 import styles from "../styles/Section.module.css";
+import React, { useState } from "react";
 
 const InsuranceCoverage = (props) => {
   const state = props.state;
 
   const targetData = props.stats[state];
+
+  const [showMore, setShowMore] = useState(false);
+
+  const toggle = () => {
+    return setShowMore(!showMore);
+    console.log("FROM TOGGLE", showMore);
+  };
 
   // PRIVATE PLANS
   const requiresCoverage = targetData.requires_coverage
@@ -142,10 +150,14 @@ const InsuranceCoverage = (props) => {
 
   return (
     <div className={styles.data_wrapper}>
-      <section className={styles.private_insurance}>
+      <section className={styles.accordian}>
         <div className={styles.insurance_type}>
           Private health insurance plans
         </div>
+        {/* IF SHOWMORE IS TRUE, SHOW -, 
+        IF SHOWMORE IS FALSE(DEFAULT), SHOW + */}
+        <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
+
         <div className={styles.subsection}>
           <div className={styles.label}>
             Does the state require abortion coverage by private health plans
