@@ -10,7 +10,11 @@ const InsuranceCoverage = (props) => {
 
   const toggle = () => {
     return setShowMore(!showMore);
-    console.log("FROM TOGGLE", showMore);
+  };
+
+  const getStyle = () => {
+    if (submitted) return styles.showContent;
+    else return styles.hideContent;
   };
 
   // PRIVATE PLANS
@@ -158,7 +162,7 @@ const InsuranceCoverage = (props) => {
         IF SHOWMORE IS FALSE(DEFAULT), SHOW + */}
         <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
 
-        <div className={styles.subsection}>
+        <div className={styles.content}>
           <div className={styles.label}>
             Does the state require abortion coverage by private health plans
             regulated by state?
@@ -182,7 +186,7 @@ const InsuranceCoverage = (props) => {
               : "This state does not have require coverage and private insurance cannot cover abortion."}
           </div>
 
-          <div>
+          <div className={styles.exceptions}>
             <h3 className={styles.secondary_label}>
               <i>
                 EXCEPTIONS TO PRIVATE HEALTH INSURANCE ABORTION-COVERAGE
@@ -207,13 +211,13 @@ const InsuranceCoverage = (props) => {
             <div className={styles.label}>Lethal fetal anomaly Exception:</div>
 
             <div className={styles.answer}>{privateFetalException()}</div>
-          </div>
 
-          <div className={styles.label}>RAPE OR INCEST Exception:</div>
-          <div className={styles.answer}>
-            {private_exception_rape_or_incest
-              ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
-              : "No rape or incest exception."}
+            <div className={styles.label}>RAPE OR INCEST Exception:</div>
+            <div className={styles.answer}>
+              {private_exception_rape_or_incest
+                ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
+                : "No rape or incest exception."}
+            </div>
           </div>
         </div>
       </section>
