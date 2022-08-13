@@ -38,10 +38,14 @@
 /* EXPAND CONTENT */
 
 
-.hideContent{
+.showContent{
 color: red;
+max-height: 9999;
+height: auto;
 }
 
-.showContent{
+.hideContent{
 color: blue;
+max-height: 0;
+overflow: hidden;
 }
