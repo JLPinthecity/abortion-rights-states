@@ -10,19 +10,26 @@
 }
 
 .title h1{
-  font-family: 'RomanceLogic';
+  font-family: 'Nanum Myeongjo', serif;
   text-align: center;
-  font-size: 1.8rem;
-  padding-top: .5rem;
+  font-size: 1.1rem;
   letter-spacing: .05em;
-  font-weight: 800;
   color: rgb(87, 111, 114);
 }
 
-.text{
+/* 
+LARGER SCREENS */
+@media only screen and (min-width: 900px)  {
+  .title h1{
+    font-size: 1.5rem;
+  }
+}
+
+.text {
   display: flex;
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
+  letter-spacing: .01em;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   font-family: 'Jost', sans-serif;
 }
 

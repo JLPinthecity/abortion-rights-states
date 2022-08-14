@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styles from "../styles/Section.module.css";
 
 const StateInsurance = (props) => {
-  const state = props.state;
-
   const targetData = props.targetData;
   const [showMore, setShowMore] = useState(false);
 
