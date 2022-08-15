@@ -64,11 +64,13 @@ const StateInsurance = (props) => {
 
   return (
     <div className={styles.data_wrapper}>
-      <section className={styles.accordian}>
-        <div className={styles.insurance_type}>
-          State marketplace insurance plans
+      <div className={styles.accordian}>
+        <div className={styles.title_wrapper}>
+          <div className={styles.insurance_type}>
+            State marketplace insurance plans
+          </div>
+          <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
         </div>
-        <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
 
         <div className={getStyle()}>
           <div className={styles.label}>
@@ -129,7 +131,7 @@ const StateInsurance = (props) => {
             </div>
           )}
         </div>
-      </section>
+      </div>
     </div>
   );
 };

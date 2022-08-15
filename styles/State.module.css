@@ -13,7 +13,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 2rem;
+    border-top: 1px solid rgb(43, 56, 38);
 }
 
 /* INTRO SECTION - LARGER SCREENS */
@@ -24,12 +25,14 @@
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: .05em;
     font-weight: 800;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Jost';
     line-height: 1.2;
-    color: black;
+    color: rgb(43, 56, 38);
+    text-transform: uppercase;
+    padding-bottom: 6rem;
 }
 
 .rightsection{
@@ -44,14 +47,14 @@
     line-height: 1;
     padding-bottom: 1rem;
     font-family: 'Jost';
-    color: gray;
+    color: rgb(43, 56, 38);
     text-transform: uppercase;
     padding-top: .5rem;
 }
 
 /* ODD SECTIONS */
 .state_container section:nth-of-type(2n+1) {
-   background-color: rgb(226, 225, 206)
+   background-color: rgb(238, 240, 237)
 }
 
 /* EVEN SECTIONS */
@@ -74,8 +77,8 @@
 .note_section{
     display: flex;
     flex-direction: column;
-   border-top: 1px solid rgb(175, 170, 170);
-   border-bottom: 1px solid rgb(175, 170, 170);
+   border-top: 1px solid rgba(207, 198, 198, 0.749);
+   border-bottom: 1px solid rgba(207, 198, 198, 0.749);
 }
 
 .note_label{

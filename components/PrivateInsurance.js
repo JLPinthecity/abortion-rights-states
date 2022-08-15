@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/Section.module.css";
 
 const PrivateInsurance = (props) => {
-  const state = props.state;
+  // const state = props.state;
 
   const targetData = props.targetData;
   const [showMore, setShowMore] = useState(false);
@@ -61,13 +61,15 @@ const PrivateInsurance = (props) => {
       : null;
   return (
     <div className={styles.data_wrapper}>
-      <section className={styles.accordian}>
-        <div className={styles.insurance_type}>
-          Private health insurance plans
-        </div>
-        {/* IF SHOWMORE IS TRUE, SHOW -, 
+      <div className={styles.accordian}>
+        <div className={styles.title_wrapper}>
+          <div onClick={() => toggle()} className={styles.insurance_type}>
+            Private health insurance plans
+          </div>
+          {/* IF SHOWMORE IS TRUE, SHOW -, 
     IF SHOWMORE IS FALSE(DEFAULT), SHOW + */}
-        <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
+          <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
+        </div>
 
         <div className={getStyle()}>
           <div className={styles.label}>
@@ -127,7 +129,7 @@ const PrivateInsurance = (props) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

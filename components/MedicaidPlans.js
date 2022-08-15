@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/Section.module.css";
 
 const MedicaidPlans = (props) => {
-  const state = props.state;
+  // const state = props.state;
 
   const targetData = props.targetData;
 
@@ -66,10 +66,12 @@ const MedicaidPlans = (props) => {
 
   return (
     <div className={styles.data_wrapper}>
-      <section className={styles.accordian}>
-        <div className={styles.insurance_type}>Medicaid </div>
+      <div className={styles.accordian}>
+        <div className={styles.title_wrapper}>
+          <div className={styles.insurance_type}>Medicaid </div>
 
-        <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
+          <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
+        </div>
 
         <div className={getStyle()}>
           <div className={styles.label}>
@@ -116,7 +118,7 @@ const MedicaidPlans = (props) => {
             </div>
           )}
         </div>
-      </section>
+      </div>
     </div>
   );
 };

@@ -3,11 +3,46 @@
     padding-bottom: 1rem;
 }
 
+.accordian{
+    border-bottom: 1px solid rgb(203, 196, 196);
+padding-bottom: 1rem;
+}
+
+.title_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.insurance_type, .title_wrapper span{
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    padding-bottom: 1rem;
+    font-family: 'Jost';
+    color: rgb(43, 56, 38);
+    text-transform: uppercase;
+    padding-top: .5rem;
+}
+
+.title_wrapper span{
+    font-size: 2.5rem;
+    font-family: 'Albert Sans', sans-serif;
+
+}
+
+
+
+
 .label{
     font-size: .85rem;
     font-weight: 800;
     font-family: 'Jost';
-    color: rgb(38, 53, 80);
+    color: rgb(36, 50, 139);
     text-transform: uppercase;
 }
 
@@ -17,35 +52,24 @@
 }
 
 .secondary_label{
-    color: gray;
+    color: rgb(43, 56, 38);
     font-size: .85rem;
     font-weight: 800;
     font-family: 'Jost';
     text-transform: uppercase;
 }
 
-.insurance_type{
-    font-family: 'Zilla Slab', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding-top: 1rem;
-    color: orange;
-    text-align: center;
-    padding-bottom: 1rem;
-}
+
 
 /* EXPAND CONTENT */
 
 
 .showContent{
-color: red;
 max-height: 9999;
 height: auto;
 }
 
 .hideContent{
-color: blue;
 max-height: 0;
 overflow: hidden;
 }
