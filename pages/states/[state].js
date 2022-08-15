@@ -75,7 +75,6 @@ const State = (props) => {
           <div className={styles.title}>{stateName} Abortion Laws </div>
 
           <div className={styles.rightsection}>
-            <div className={styles.small_title}>Providing Clarity</div>
             <div>
               Here we break down state rulings about gestational limits,
               insurance coverage, and more.

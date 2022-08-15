@@ -69,7 +69,7 @@ const GestationalLimits = (props) => {
         case "Lethal fetal anomaly":
           return "Abortion is allowed based on the health or status of the fetus. Exceptions in place for lethal fetal anomalites.";
         default:
-          return "No exceptions for fetal anomalies specified.";
+          return "No exceptions for fetal anomalies specified";
       }
     };
 
@@ -103,7 +103,7 @@ const GestationalLimits = (props) => {
           <div className={styles.answer}>
             {exception_rape_or_incest
               ? "State allow abortion in cases of rape or incest."
-              : "This state does not have rape and incest exceptions in place."}
+              : "No rape and incest exception specified"}
           </div>
 
           <div className={styles.label}>
