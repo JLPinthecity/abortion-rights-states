@@ -68,7 +68,9 @@ const MedicaidPlans = (props) => {
     <div className={styles.data_wrapper}>
       <div className={styles.accordian}>
         <div className={styles.title_wrapper}>
-          <div className={styles.insurance_type}>Medicaid </div>
+          <div onClick={() => toggle()} className={styles.insurance_type}>
+            Medicaid{" "}
+          </div>
 
           <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
         </div>

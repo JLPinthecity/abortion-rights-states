@@ -66,7 +66,7 @@ const StateInsurance = (props) => {
     <div className={styles.data_wrapper}>
       <div className={styles.accordian}>
         <div className={styles.title_wrapper}>
-          <div className={styles.insurance_type}>
+          <div onClick={() => toggle()} className={styles.insurance_type}>
             State marketplace insurance plans
           </div>
           <span onClick={() => toggle()}>{showMore ? "-" : "+"}</span>
