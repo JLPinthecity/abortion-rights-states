@@ -1,6 +1,4 @@
-
-/* 
-SMALLER SCREENS */
+/* SMALLER SCREENS */
 .header_container{
     width: 100%;
     display: flex;
@@ -8,8 +6,7 @@ SMALLER SCREENS */
     border-bottom: none;
 }
 
-/* 
-LARGER SCREENS */
+/* LARGER SCREENS */
 @media only screen and (min-width: 900px)  {
     .header_container{
         border-bottom: 1px solid rgba(207, 198, 198, 0.749);
@@ -24,8 +21,8 @@ LARGER SCREENS */
 }
 
 /* SMALLER SCREEN */
-.title{
-    font-family: 'Zilla Slab', serif;
+.title {
+    font-family: 'Backsplash';
     font-size: 1.7rem;   
     padding: .8rem;
 }
@@ -34,12 +31,12 @@ LARGER SCREENS */
 @media only screen and (min-width: 900px)  {
     .title{
         padding: 2rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
 .title a {
-    color: rgb(32, 58, 123);
+    color: black;
     text-decoration: none;
 }
 

@@ -87,8 +87,8 @@ const GestationalLimits = (props) => {
           </div>
           <div className={styles.answer}>
             {exception_life
-              ? "In this state, abortion allowed if deemed necessary to save a pregnant person's life."
-              : "This state does not have life-saving exemptions in place."}
+              ? "Abortion is allowed if deemed necessary to save a pregnant person's life."
+              : "No life-saving exception in place."}
           </div>
 
           <div className={styles.label}>
@@ -101,7 +101,7 @@ const GestationalLimits = (props) => {
           <div className={styles.label}>ARE RAPE OR INCEST EXCEPTION:</div>
           <div className={styles.answer}>
             {exception_rape_or_incest
-              ? "State allow abortion in cases of rape or incest."
+              ? "State allows abortion in cases of rape or incest."
               : "No rape and incest exception specified"}
           </div>
 

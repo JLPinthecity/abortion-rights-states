@@ -5,7 +5,7 @@ body {
   line-height: 1.6;
   letter-spacing: 2px;
   font-size: 16px;
-  background-color: rgb(255,255,255);
+  background-color: rgb(251, 246, 248);
   color: rgb(36, 50, 139);
 }
 
@@ -14,7 +14,6 @@ body {
 }
 
 .main a {
- 
   text-decoration: none;
   text-transform: uppercase;
 }
