@@ -26,7 +26,6 @@ LARGER SCREENS */
 }
 
 .text {
-  display: flex;
   letter-spacing: .01em;
   padding: 1rem 2rem;
   font-size: 1rem;

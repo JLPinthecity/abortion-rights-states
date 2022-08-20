@@ -82,12 +82,10 @@ const GestationalLimits = (props) => {
 
           <div className={styles.answer}>{bans() ? `${bans()}` : "RUH-OH"}</div>
 
-          <div className={styles.label}>
-            IS THERE A LIFE-SAVING EXCEPTION IN PLACE?
-          </div>
+          <div className={styles.label}>LIFE-SAVING EXCEPTION:</div>
           <div className={styles.answer}>
             {exception_life
-              ? "Abortion is allowed if deemed necessary to save a pregnant person's life."
+              ? "Abortion is allowed if necessary to save a pregnant person's life."
               : "No life-saving exception in place."}
           </div>
 
@@ -98,16 +96,14 @@ const GestationalLimits = (props) => {
             {distinction_to_life_saving_exemption()}
           </div>
 
-          <div className={styles.label}>ARE RAPE OR INCEST EXCEPTION:</div>
+          <div className={styles.label}>RAPE OR INCEST EXCEPTION:</div>
           <div className={styles.answer}>
             {exception_rape_or_incest
-              ? "State allows abortion in cases of rape or incest."
+              ? "Abortion is allowed in cases of rape or incest."
               : "No rape and incest exception specified"}
           </div>
 
-          <div className={styles.label}>
-            ARE THERE Fetal anomaly exceptions in place?
-          </div>
+          <div className={styles.label}>LETHAL FETAL ANOMALY EXCEPTION:</div>
           <div className={styles.answer}>{fetal_health_exemption()}</div>
         </div>
       </div>
@@ -117,7 +113,7 @@ const GestationalLimits = (props) => {
       <div className={styles.answer}>
         <p>
           Abortion is legal at all stages in {state}. There is no limit on
-          abortion in {state} based on the gestational age of the fetus.
+          abortion in {state} based on the gestational age of fetus.
         </p>
       </div>
     );
