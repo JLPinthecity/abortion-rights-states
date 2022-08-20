@@ -86,7 +86,7 @@ const GestationalLimits = (props) => {
           <div className={styles.answer}>
             {exception_life
               ? "Abortion is allowed if necessary to save a pregnant person's life."
-              : "No life-saving exception in place."}
+              : "No life-saving exception in place"}
           </div>
 
           <div className={styles.label}>
