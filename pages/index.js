@@ -35,18 +35,14 @@ export default function Home(props) {
       <div className={styles.intro}>
         <div className={styles.text}>
           <p>
-            Click on your state on the U.S. map or select your state from the
-            dropdown to see up-to-date data about abortion laws in your state.
-            <br />
-            <br />
-            Find out specifics about what your state mandates in terms of
-            gestational limits, private and public insurance coverage, mandatory
-            waiting periods, and regulations regarding minors.
-            <br />
-            <br />
-            We try and define terms like <i>gestational limit</i> and{" "}
-            <i>viability </i>
-            for better comprehension of current state regulations.
+            Click on state below to see up-to-date data about abortion laws.
+          </p>
+
+          <p>
+            See a break down of what each state mandates in terms of gestational
+            limits on abortion bans, required and limited insurance coverage,
+            mandatory waiting periods, and regulations regarding minors'
+            abortions.
           </p>
         </div>
 
