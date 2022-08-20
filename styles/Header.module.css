@@ -22,9 +22,9 @@
 
 /* SMALLER SCREEN */
 .title {
-    font-family: 'Backsplash';
+    font-family: 'Jost', sans-serif;
     font-size: 1.7rem;   
-    padding: .8rem;
+    padding: 2rem;
 }
 
 /* LARGER SCREEN */
