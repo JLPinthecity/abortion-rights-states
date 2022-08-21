@@ -38,7 +38,7 @@ const MedicaidPlans = (props) => {
   const medicaidExceptionHealth = () => {
     switch (medicaid_exception_health) {
       case "physical":
-        return "This state allows Medicaid  coverage of abortion when the pregnant person&apos;s physical health is endangered. (This is a requirement of the Hyde amendment.)";
+        return "This state allows Medicaid  coverage of abortion when the pregnant person's physical health is endangered. (This is a requirement of the Hyde amendment.)";
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -98,7 +98,7 @@ const MedicaidPlans = (props) => {
 
               <div className={styles.answer}>
                 {medicaid_exception_life
-                  ? "The state allows Medicaid insurance to cover abortion when it&apos;s necessary to save the pregnant person&apos;s life. (This is required by the Hyde amendment.)"
+                  ? "The state allows Medicaid insurance to cover abortion when it's necessary to save the pregnant person's life. (This is required by the Hyde amendment.)"
                   : "No life-saving exemption"}
               </div>
 

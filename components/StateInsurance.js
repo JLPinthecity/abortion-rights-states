@@ -41,9 +41,9 @@ const StateInsurance = (props) => {
   const exchangeExceptionHealth = () => {
     switch (exchange_exception_health) {
       case "major bodily function":
-        return "This state allows ACA plan coverage of abortion when the pregnant person&apos;s faces a &apos;substantial and irreversible impairment of a major bodily function.&apos;";
+        return "This state allows ACA plan coverage of abortion when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
       case "physical":
-        return "This state allows ACA plan coverage of abortion when the pregnant person&apos;s faces serious impacts on &apos;physical&apos; health.";
+        return "This state allows ACA plan coverage of abortion when the pregnant person's faces serious impacts on 'physical' health.";
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -85,7 +85,7 @@ const StateInsurance = (props) => {
 
           <div className={styles.label}>
             Are there restrictions on abortion coverage with health plans
-            offered in the state&apos;s Health Care Exchange?
+            offered in the state's Health Care Exchange?
           </div>
           <div className={styles.answer}>
             {exchange_coverage_no_restrictions
@@ -106,7 +106,7 @@ const StateInsurance = (props) => {
 
               <div className={styles.answer}>
                 {exchange_exception_life
-                  ? "Despite restrictions, this state allows ACA plans to cover abortion when it&apos;s necessary to save the pregnant person&apos;s life."
+                  ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
                   : "No life-saving exemption"}
               </div>
 

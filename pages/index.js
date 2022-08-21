@@ -41,7 +41,7 @@ export default function Home(props) {
           <p>
             See a break down of what each state mandates in terms of gestational
             limits on abortion bans, required and limited insurance coverage,
-            mandatory waiting periods, and regulations regarding minors&apos;
+            mandatory waiting periods, and regulations regarding minors'
             abortions.
           </p>
         </div>
