@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Abortion Rights by State is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -20,15 +20,19 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Abortion Rights by State is a tool anyone can use to familiarize themselves with abortion rights in any state. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+State laws are populated programmatically from the Abortion Policy API. Datapoints from  Abortion Policy API are updated at the end of every month.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Abortion Rights by State aims to provide more clarity about state regulated on gestational limits, private and public insurance covers limits, rules
 
-## Deploy on Vercel
+## Pictures
+<img width="921" alt="Screen Shot 2022-08-21 at 3 57 21 PM" src="https://user-images.githubusercontent.com/38967615/185808886-27a8865b-a34d-4f7b-a4a3-314a8a3ad97c.png">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img width="306" alt="Screen Shot 2022-08-21 at 3 57 47 PM" src="https://user-images.githubusercontent.com/38967615/185808889-e91af177-c3a2-4370-85f9-f6e9bc850428.png">
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="907" alt="Screen Shot 2022-08-21 at 3 57 59 PM" src="https://user-images.githubusercontent.com/38967615/185808892-18ce22d1-31b7-4293-a60b-2b035d72a40a.png">
+
+<img width="909" alt="Screen Shot 2022-08-21 at 3 58 17 PM" src="https://user-images.githubusercontent.com/38967615/185808899-41900b12-dab6-4e42-91e0-fd2fb3562244.png">
+
+
