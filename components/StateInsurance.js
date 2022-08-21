@@ -41,9 +41,9 @@ const StateInsurance = (props) => {
   const exchangeExceptionHealth = () => {
     switch (exchange_exception_health) {
       case "major bodily function":
-        return "This state allows ACA plan coverage of abortion when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+        return "This state allows ACA plan coverage of abortion when the pregnant person&apos;s faces a &apos;substantial and irreversible impairment of a major bodily function.&apos;";
       case "physical":
-        return "This state allows ACA plan coverage of abortion when the pregnant person's faces serious impacts on 'physical' health.";
+        return "This state allows ACA plan coverage of abortion when the pregnant person&apos;s faces serious impacts on &apos;physical&apos; health.";
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -106,7 +106,7 @@ const StateInsurance = (props) => {
 
               <div className={styles.answer}>
                 {exchange_exception_life
-                  ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
+                  ? "Despite restrictions, this state allows ACA plans to cover abortion when it&apos;s necessary to save the pregnant person&apos;s life."
                   : "No life-saving exemption"}
               </div>
 

@@ -49,11 +49,11 @@ const GestationalLimits = (props) => {
     const distinction_to_life_saving_exemption = () => {
       switch (exception_health) {
         case "Physical":
-          return "Abortion is allowed to preserve the pregnant person's life. Specifically, physical health (excluding mental health).";
+          return "Abortion is allowed to preserve the pregnant person&apos;s life. Specifically, physical health (excluding mental health).";
         case "Any":
-          return "Abortion is allowed to preserve the pregnant person's life. There is no distinction made between physical and mental health.";
+          return "Abortion is allowed to preserve the pregnant person&apos;s life. There is no distinction made between physical and mental health.";
         case "Major Bodily Function":
-          return "Abortion is allowed to preserve the pregnant person's life. Abortion is allowed in cases where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
+          return "Abortion is allowed to preserve the pregnant person&apos;s life. Abortion is allowed in cases where a pregnant person would suffer substantial and irreversible impairment of a major bodily function. May include mental health.";
         case null:
           return "No distinctions specified";
         default:
@@ -85,7 +85,7 @@ const GestationalLimits = (props) => {
           <div className={styles.label}>LIFE-SAVING EXCEPTION:</div>
           <div className={styles.answer}>
             {exception_life
-              ? "Abortion is allowed if necessary to save a pregnant person's life."
+              ? "Abortion is allowed if necessary to save a pregnant person&apos;s life."
               : "No life-saving exception in place"}
           </div>
 

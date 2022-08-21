@@ -51,13 +51,13 @@ const Minors = (props) => {
     const num_parents_required = () => {
       switch (parents_required) {
         case 1:
-          return "One parent must be notified. **Many, but not all, states have extended the definition of 'parent' to include other adult guardians.";
+          return "One parent must be notified. **Many, but not all, states have extended the definition of &apos;parent&apos; to include other adult guardians.";
         case 2:
-          return "Both parents of the minor must be notified. **Many, but not all, states have extended the definition of 'parent' to include other adult guardians.";
+          return "Both parents of the minor must be notified. **Many, but not all, states have extended the definition of &apos;parent&apos; to include other adult guardians.";
         case null:
-          return "There are no restrictions on minors' abortions currently being enforced.";
+          return "There are no restrictions on minors&apos; abortions currently being enforced.";
         default:
-          return "There are no restrictions on minors' abortions currently being enforced.";
+          return "There are no restrictions on minors&apos; abortions currently being enforced.";
       }
     };
 
@@ -84,7 +84,7 @@ const Minors = (props) => {
         <div className={styles.label}>Parental notification requirement:</div>
         <div className={styles.answer}>
           {parental_notification_required
-            ? "Parental notification must be given. A parent or parents must be told beforehand of the minor's decision to have an abortion."
+            ? "Parental notification must be given. A parent or parents must be told beforehand of the minor&apos;s decision to have an abortion."
             : "Parental notification is not mandated."}
         </div>
 

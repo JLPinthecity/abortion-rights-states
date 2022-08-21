@@ -7,4 +7,4 @@ const kebabCase = (name) => {
 
 export default kebabCase;
 
-//function that's being used more than once
+//function that is being used more than once

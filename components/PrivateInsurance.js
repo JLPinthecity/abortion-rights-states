@@ -40,7 +40,7 @@ const PrivateInsurance = (props) => {
   const privateHealthException = () => {
     switch (private_exception_health) {
       case "major bodily function":
-        return "This state allows private insurance coverage when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+        return "This state allows private insurance coverage when the pregnant person&apos;s faces a &apos;substantial and irreversible impairment of a major bodily function.&apos;";
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -107,7 +107,7 @@ const PrivateInsurance = (props) => {
 
             <div className={styles.answer}>
               {privateLifeException
-                ? "This state allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life."
+                ? "This state allows private insurance coverage for cases where abortion is necessary to save the pregnant person&apos;s life."
                 : "No life-saving exemption"}
             </div>
 
