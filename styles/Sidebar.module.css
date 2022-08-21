@@ -1,0 +1,56 @@
+.openSidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 1000;
+}
+
+.hideSidebar {
+    display: none;
+}
+
+
+.wrapper{
+    font-size: 1.8rem;
+    font-family: 'Jost';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color:  black;
+    background-color: rgb(251, 246, 248);
+    padding-top: 2.5rem;
+}
+
+.closeContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+.openSidebar svg{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.openSidebar a{
+padding: 1rem;
+text-decoration: none;
+color: black;
+}
+
+.openSidebar a:hover{
+    color: rgb(36, 50, 139);
+}
+@media only screen and (min-width: 900px)  {
+    .wrapper{
+        font-size: 3rem;
+    }
+} 
+

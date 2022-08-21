@@ -3,10 +3,10 @@ import styles from "../styles/Header.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import Navbar from "./Navbar";
 
-const Header = () => {
+const Header = ({ toggle }) => {
   return (
     <div className={styles.header_container}>
-      <MenuIcon className={styles.icon} />
+      <MenuIcon className={styles.icon} onClick={toggle} />
       <div className={styles.header_wrapper}>
         <div className={styles.title}>
           <Link href="/">
