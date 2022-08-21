@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar.jsx";
 
 const Header = ({ toggle }) => {
   return (
