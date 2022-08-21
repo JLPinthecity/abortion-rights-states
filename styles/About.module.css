@@ -1,0 +1,9 @@
+.about_wrapper{
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Jost';
+}
+
+.about_wrapper p{
+    padding: 1rem;
+}
