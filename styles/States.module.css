@@ -1,0 +1,12 @@
+.states_container{
+    width: 100%;
+    padding: 1rem;
+}
+
+.states{
+    padding: .5rem;
+}
+
+.state{
+    cursor: pointer;
+}
