@@ -6,7 +6,7 @@ const About = () => {
     <div className={styles.about_wrapper}>
       <p>
         Abortion Rights by State is a tool anyone can use to familiarize
-        themselves with abortion rights in any state.
+        themselves with abortion rights in each state.
       </p>
 
       <p>
@@ -18,9 +18,15 @@ const About = () => {
       </p>
 
       <p>
-        Abortion Rights by State aims to provide more clarity about state
-        regulated on gestational limits, private and public insurance covers
-        limits, rules
+        Abortion Rights by State aims to provide clarity about wide-ranging
+        state regulations regarding gestational limits, private and public
+        insurance coverage limits, waiting periods, and parent
+        notification/consent rules for minors seeking abortions.
+      </p>
+
+      <p>
+        All searches are completely anonymous. No user data is ever tracked or
+        stored.
       </p>
     </div>
   );

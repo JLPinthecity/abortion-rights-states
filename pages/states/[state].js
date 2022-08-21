@@ -119,8 +119,8 @@ const State = (props) => {
                 Below, private health insurance refers to plans *regulated by
                 the state*. State restrictions on abortion coverage do not apply
                 to self-insured plans (commonly when the employer takes on all
-                the risk versus contracting with a health insurer) versus
-                self-insured plans regulated at the federal level.
+                the risk versus contracting with a health insurer) regulated at
+                the federal level.
               </p>
               <p>
                 The Hyde Amendment (originally passed in 1977 after the 1973’s
@@ -133,7 +133,7 @@ const State = (props) => {
                 Since the ACA passage in 2010, many antiabortion conservatives
                 have helped pass restrictions on private health insurance that
                 are more restrictive than the Hyde limitations and banned
-                abortion coverage completely from state Marketplace plans.
+                abortion coverage by state Marketplace plans.
               </p>
 
               <p>
