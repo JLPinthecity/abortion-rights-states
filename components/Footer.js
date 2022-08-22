@@ -9,7 +9,7 @@ const Footer = () => {
           <div className={styles.footer_title}>Abortion is health care.</div>
           <div className={styles.footer_email}>
             <p>
-              If you have a question, want to submit a corrections or have a
+              If you have a question, want to submit a correction, or have a
               general inquiry, we would love to hear from you.
             </p>
           </div>
