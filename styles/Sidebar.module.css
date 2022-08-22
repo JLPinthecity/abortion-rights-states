@@ -8,8 +8,9 @@
 }
 
 .hideSidebar {
-    visibility: hidden;
+    display: none !important;
 }
+
 
 .wrapper{
     font-size: 1.8rem;
