@@ -23,6 +23,10 @@ const Sidebar = ({ show, toggle }) => {
         <Link href="/states" className={styles.links}>
           <a onClick={toggle}>States</a>
         </Link>
+
+        <Link href="/contact" className={styles.link}>
+          <a onClick={toggle}>Contact</a>
+        </Link>
       </div>
     </div>
   );

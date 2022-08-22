@@ -28,12 +28,12 @@ const Footer = () => {
             <a>Home</a>
           </Link>
 
-          <Link href="/states" className={styles.box_link}>
-            <a>States</a>
-          </Link>
-
           <Link href="/about" className={styles.box_link}>
             <a>About</a>
+          </Link>
+
+          <Link href="/states" className={styles.box_link}>
+            <a>States</a>
           </Link>
 
           <Link href="/contact" className={styles.link}>
