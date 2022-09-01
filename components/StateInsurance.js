@@ -41,9 +41,9 @@ const StateInsurance = (props) => {
   const exchangeExceptionHealth = () => {
     switch (exchange_exception_health) {
       case "major bodily function":
-        return "This state allows ACA plan coverage of abortion when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+        return `${state} allows ACA plan coverage of abortion when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'`;
       case "physical":
-        return "This state allows ACA plan coverage of abortion when the pregnant person's faces serious impacts on 'physical' health.";
+        return `${state} allows ACA plan coverage of abortion when the pregnant person's faces serious impacts on 'physical' health.`;
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -52,7 +52,7 @@ const StateInsurance = (props) => {
   const exchangeFetalException = () => {
     switch (exchange_exception_fetal) {
       case "Lethal fetal anomaly":
-        return "This state allows ACA plans to cover anabortion when the fetus has a lethal fetal anomaly.";
+        return `${state} allows ACA plans to cover anabortion when the fetus has a lethal fetal anomaly.`;
       default:
         return "No exceptions for lethal fetal anomalies specified.";
     }
@@ -79,8 +79,8 @@ const StateInsurance = (props) => {
           </div>
           <div className={styles.answer}>
             {exchange_forbids_coverage
-              ? "Yes, this state prohibits any and all exchange insurance coverage of abortion."
-              : "No, this state does not explicitly forbid any and all exchange insurance coverage of abortion."}
+              ? `Yes, ${state} prohibits any and all exchange insurance coverage of abortion.`
+              : `No, ${state} does not explicitly forbid any and all exchange insurance coverage of abortion.`}
           </div>
 
           <div className={styles.label}>
@@ -106,7 +106,7 @@ const StateInsurance = (props) => {
 
               <div className={styles.answer}>
                 {exchange_exception_life
-                  ? "Despite restrictions, this state allows ACA plans to cover abortion when it's necessary to save the pregnant person's life."
+                  ? `Despite restrictions, ${state} allows ACA plans to cover abortion when it's necessary to save the pregnant person's life.`
                   : "No life-saving exemption"}
               </div>
 
@@ -125,7 +125,7 @@ const StateInsurance = (props) => {
               <div className={styles.label}>RAPE OR INCEST Exception:</div>
               <div className={styles.answer}>
                 {exchange_exception_rape_or_incest
-                  ? "This state allows ACA plans to cover abortion when a pregnancy is a result of rape or incest."
+                  ? `${state} allows ACA plans to cover abortion when a pregnancy is a result of rape or incest.`
                   : "No rape or incest exception."}
               </div>
             </div>

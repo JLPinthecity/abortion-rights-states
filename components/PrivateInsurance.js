@@ -40,7 +40,7 @@ const PrivateInsurance = (props) => {
   const privateHealthException = () => {
     switch (private_exception_health) {
       case "major bodily function":
-        return "This state allows private insurance coverage when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'";
+        return `${state} allows private insurance coverage when the pregnant person's faces a 'substantial and irreversible impairment of a major bodily function.'`;
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -49,7 +49,7 @@ const PrivateInsurance = (props) => {
   const privateFetalException = () => {
     switch (private_exception_fetal) {
       case "Lethal fetal anomaly":
-        return "This state allows private insurance coverage when the fetus has a lethal fetal anomaly.";
+        return `${state} allows private insurance coverage when the fetus has a lethal fetal anomaly.`;
       default:
         return "No exceptions for lethal fetal anomalies specified.";
     }
@@ -80,7 +80,7 @@ const PrivateInsurance = (props) => {
           <div className={styles.answer}>
             {requiresCoverage
               ? "Yes, private health plans regulated by the state are required to cover abortions. This regulation does not apply to self-insured plans regulated at the federal versus the state level)."
-              : "No, this state does not have require abortion coverage by private health plans regulated by state."}
+              : `No, ${state} does not have require abortion coverage by private health plans regulated by state.`}
           </div>
 
           <div className={styles.label}>
@@ -92,7 +92,7 @@ const PrivateInsurance = (props) => {
           <div className={styles.answer}>
             {privateCoverage
               ? "Private insurance may cover abortion but not necessarily required to."
-              : "This state does not have require coverage and private insurance cannot cover abortion."}
+              : `${state} does not have require coverage and private insurance cannot cover abortion.`}
           </div>
 
           <div className={styles.exceptions}>
@@ -107,7 +107,7 @@ const PrivateInsurance = (props) => {
 
             <div className={styles.answer}>
               {privateLifeException
-                ? "This state allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life."
+                ? `${state} allows private insurance coverage for cases where abortion is necessary to save the pregnant person's life.`
                 : "No life-saving exemption"}
             </div>
 
@@ -124,7 +124,7 @@ const PrivateInsurance = (props) => {
             <div className={styles.label}>RAPE OR INCEST Exception:</div>
             <div className={styles.answer}>
               {private_exception_rape_or_incest
-                ? "This state allows private insurance coverage for cases where pregnancy is a result of rape or incest."
+                ? `${state} allows private insurance coverage for cases where pregnancy is a result of rape or incest.`
                 : "No rape or incest exception."}
             </div>
           </div>

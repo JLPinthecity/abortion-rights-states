@@ -6,6 +6,8 @@ const MedicaidPlans = (props) => {
 
   const targetData = props.targetData;
 
+  const state = props.state;
+
   const [showMore, setShowMore] = useState(false);
 
   const toggle = () => {
@@ -38,7 +40,7 @@ const MedicaidPlans = (props) => {
   const medicaidExceptionHealth = () => {
     switch (medicaid_exception_health) {
       case "physical":
-        return "This state allows Medicaid  coverage of abortion when the pregnant person's physical health is endangered. (This is a requirement of the Hyde amendment.)";
+        return `${state} allows Medicaid coverage of abortion when the pregnant person's physical health is endangered. (This is a requirement of the Hyde amendment.)`;
       default:
         return "No exceptions for serious health conditions specified.";
     }
@@ -49,7 +51,7 @@ const MedicaidPlans = (props) => {
   const medicaidExceptionFetal = () => {
     switch (medicaid_exception_fetal) {
       case "Serious fetal anomaly":
-        return "This state allows Medicaid  coverage of abortion when the fetus has a serious or lethal fetal anomaly.";
+        return `${state} allows Medicaid  coverage of abortion when the fetus has a serious or lethal fetal anomaly.`;
       default:
         return "No exception for fetal anomaly.";
     }
@@ -85,8 +87,8 @@ const MedicaidPlans = (props) => {
           </div>
           <div className={styles.answer}>
             {medicaid_coverage_provider_patient_decision
-              ? "Yes, this state has a policy in place to use Medicaid funds to pay for abortion."
-              : "No, this state does not have a policy in place for Medicaid funds to cover abortion."}
+              ? `Yes, ${state} has a policy in place to use Medicaid funds to pay for abortion.`
+              : `No, ${state} does not have a policy in place for Medicaid funds to cover abortion.`}
           </div>
           {!medicaid_coverage_provider_patient_decision && (
             <div className={styles.exceptions}>
@@ -98,7 +100,7 @@ const MedicaidPlans = (props) => {
 
               <div className={styles.answer}>
                 {medicaid_exception_life
-                  ? "The state allows Medicaid insurance to cover abortion when it's necessary to save the pregnant person's life. (This is required by the Hyde amendment.)"
+                  ? `${state} allows Medicaid insurance to cover abortion when it's necessary to save the pregnant person's life. (This is required by the Hyde amendment.)`
                   : "No life-saving exemption"}
               </div>
 
@@ -114,7 +116,7 @@ const MedicaidPlans = (props) => {
               <div className={styles.label}>RAPE OR INCEST Exception:</div>
               <div className={styles.answer}>
                 {medicaid_exception_rape_or_incest
-                  ? "This state allows Medicaid insurance coverage for cases where pregnancy is a result of rape or incest. (This is required by the Hyde amendment)."
+                  ? `${state} allows Medicaid insurance coverage for cases where pregnancy is a result of rape or incest. (This is required by the Hyde amendment).`
                   : "No rape or incest exception."}
               </div>
             </div>

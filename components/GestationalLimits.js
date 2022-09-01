@@ -20,7 +20,7 @@ const GestationalLimits = (props) => {
         case 99:
           return "Bans after fetal viability (when a fetus can survive outside the womb)";
         case null:
-          return "Abortion is banned in this state";
+          return `Abortion is banned in ${state}`;
         default:
           return `${banned} weeks since Last Menstrual Period (LMP)`;
       }

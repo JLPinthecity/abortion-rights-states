@@ -77,7 +77,7 @@ const Minors = (props) => {
         <div className={styles.label}>Parental consent requirement:</div>
         <div className={styles.answer}>
           {parental_consent_required
-            ? "In this state, parental consent from a parent or parents is required for a minor to obtain an abortion."
+            ? `In ${state}, parental consent from a parent or parents is required for a minor to obtain an abortion.`
             : "Parental consent is not required."}
         </div>
 
