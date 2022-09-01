@@ -43,7 +43,7 @@ const WaitingPeriods = (props) => {
           counseling):
         </div>
         <div className={styles.answer}>
-          {waitingPeriod} hours—waived in a medical emergeny or when a pregnant
+          {waitingPeriod} hours—waived in a medical emergency or when a pregnant
           person's health or life is threatened.
         </div>
 
