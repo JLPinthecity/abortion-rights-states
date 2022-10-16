@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/Section.module.css";
 
 const PrivateInsurance = (props) => {
-  // const state = props.state;
+  const state = props.state;
 
   const targetData = props.targetData;
   const [showMore, setShowMore] = useState(false);
@@ -51,7 +51,7 @@ const PrivateInsurance = (props) => {
       case "Lethal fetal anomaly":
         return `${state} allows private insurance coverage when the fetus has a lethal fetal anomaly.`;
       default:
-        return "No exceptions for lethal fetal anomalies specified.";
+        return "No exceptions for lethal fetal anomalies specified";
     }
   };
 
@@ -125,7 +125,7 @@ const PrivateInsurance = (props) => {
             <div className={styles.answer}>
               {private_exception_rape_or_incest
                 ? `${state} allows private insurance coverage for cases where pregnancy is a result of rape or incest.`
-                : "No rape or incest exception."}
+                : "No rape or incest exception"}
             </div>
           </div>
         </div>
